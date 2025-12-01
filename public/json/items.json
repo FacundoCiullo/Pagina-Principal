@@ -1,0 +1,56 @@
+[
+  {
+    "img": "/images/albañileria.png",
+    "title": "Albañilería"
+  },
+  {
+    "img": "/images/aireacondicionado.png",
+    "title": "Aire Acondicionado"
+  },
+  {
+    "img": "/images/carpinteria.png",
+    "title": "Carpintería"
+  },
+  {
+    "img": "/images/cerrageria.png",
+    "title": "Cerrageria"
+  },
+  {
+    "img": "/images/costura.png",
+    "title": "Costura"
+  },
+  {
+    "img": "/images/elesctricista.png",
+    "title": "Electricidad",
+    "cols": 2
+  },
+  {
+    "img": "/images/fumigacion.png",
+    "title": "Fumigadoción"
+  },
+  {
+    "img": "/images/gasista.png",
+    "title": "Gasista"
+  },
+  {
+    "img": "/images/jardineria.png",
+    "title": "Jardinería"
+  },
+  {
+    "img": "/images/limpieza.png",
+    "title": "limpieza"
+  },
+  {
+    "img": "/images/pintor.png",
+    "title": "Pintor"
+  },
+  {
+    "img": "/images/plomeria.png",
+    "title": "Plomería"
+  },
+  {
+    "img": "/images/electrodomestico.png",
+    "title": "Reparación de Electrodomésticos",
+    "cols": 2
+  }
+]
