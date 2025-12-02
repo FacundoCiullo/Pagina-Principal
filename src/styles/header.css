@@ -12,7 +12,7 @@ header {
 }
 
 .navbar-container {
-  width: min(1100px, 90%);
+  width: min(1200px, 90%);
   margin: auto;
   display: flex;
   justify-content: space-between;

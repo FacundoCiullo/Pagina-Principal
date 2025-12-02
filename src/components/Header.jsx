@@ -15,7 +15,7 @@ export default function Header() {
         <ul className="nav-links">
           <li><Link to="/">Inicio</Link></li>
           <li><Link to="/servicios">Servicios</Link></li>
-          <li><a href="#porfolio">Porfolio</a></li>
+          <li><Link to="/proyectos">Proyectos</Link></li>
           <li><a href="#sobremi">Sobre Mí</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Testimonials from "../components/Testimonials";
 import { FaCode } from "react-icons/fa";
 import "../styles/home.css";
 
@@ -55,32 +56,32 @@ export default function Home() {
           <div className="cards-grid">
             <article className="card glass interactive">
               <div className="card-icon" aria-hidden="true"><FaCode /></div>
-              <h3>Desarrollo Web</h3>
-              <p>Webs rápidas, accesibles y optimizadas para SEO y conversión.</p>
+              <h3>Landing Page</h3>
+              <p>Página única diseñada para captar clientes. Ideal para cualquier negocio que necesite presencia web rápida y efectiva.</p>
               <span className="card-cta">Ver más →</span>
               <div className="card-glow" />
             </article>
 
             <article className="card glass interactive">
               <div className="card-icon" aria-hidden="true">🛒</div>
-              <h3>Ecommerce</h3>
-              <p>Tiendas escalables con métricas reales y funnel optimizado.</p>
+              <h3>Web Institucional</h3>
+              <p>Presencia web con múltiples secciones. Perfecta para empresas o negocios que buscan proyectar profesionalismo.</p>
               <span className="card-cta">Ver más →</span>
               <div className="card-glow" />
             </article>
 
             <article className="card glass interactive">
               <div className="card-icon" aria-hidden="true">📱</div>
-              <h3>Apps Mobile</h3>
-              <p>Apps iOS/Android con React Native — rendimiento y UX nativo.</p>
+              <h3>E-COMMERCE</h3>
+              <p>Presencia web completa con múltiples secciones. Perfecta para cualquier empresa o negocio que busca proyectar seriedad y profesionalismo.</p>
               <span className="card-cta">Ver más →</span>
               <div className="card-glow" />
             </article>
 
             <article className="card glass interactive">
               <div className="card-icon" aria-hidden="true">⚙️</div>
-              <h3>Soporte</h3>
-              <p>Mantenimiento, monitorización y optimizaciones continuas.</p>
+              <h3>MENÚ DIGITAL</h3>
+              <p>Carta digital profesional para restaurantes. Tus clientes pueden ver el menú desde su celular escaneando un código QR.</p>
               <span className="card-cta">Ver más →</span>
               <div className="card-glow" />
             </article>
@@ -123,6 +124,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 🔹 Testimonios */}
+      <Testimonials />
 
       {/* SOBRE MÍ */}
       <section id="sobremi" className="section">
