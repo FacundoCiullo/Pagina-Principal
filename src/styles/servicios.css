@@ -1,148 +1,194 @@
-.cta-card-icon {
-  size: 64px;
-}
-
-/* Precios */
-.precio-viejo {
-  color: #a0a0a0;
-  text-decoration: line-through;
-  font-size: 28px;
-}
-.precio-nuevo {
-  color: #ffb300;
-  font-weight: 800;
-  font-size: 36px;
-}
-.card h5 {
-  margin-top: 20px;
-  margin-bottom: 0px;
-}
-.card span {
-  margin-bottom: 16px;
-  font-size: 14px;
-}
-.card h3 {
-  margin: 30px;
-}
-
-.card p {
-  text-align: center;
-  font-weight: 100;
-  color: var(--color-text);
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.icon-chek {
-  color: #ffb300;
-  margin-right: 4px;
-}
-
-/* Página */
-.servicios-page {
-  padding-top: 10px;
-  padding-bottom: 120px;
-}
-
-.servicios-title {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
-.servicios-sub {
-  text-align: center;
-  margin: 0px;
-  opacity: 0.8;
-  margin-bottom: 30px;
-}
-
-/* Grid */
-.servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.servicios-grid > *:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  justify-self: center;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .servicios-grid {
-    grid-template-columns: 1fr;
-  }
-  .service-card{
-    margin: 0 5px 0 5px;
-  }
-  .card h3 {
+  /* =========================================
+    HEADER SERVICIOS
+  ========================================= */
+  .servicios-header {
+    background-color: rgb(67, 67, 67);
+    padding: 120px 20px;
+    margin-bottom: 30px;
     text-align: center;
-    margin: 10px;
-    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
   }
+
+  /* Capa oscura */
+  .servicios-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+  }
+
+  .servicios-header * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* =========================================
+    GRID GENERAL
+  ========================================= */
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* =========================================
+    PÁGINA PRINCIPAL
+  ========================================= */
+  .servicios-page {
+    padding-top: 10px;
+    padding-bottom: 120px;
+  }
+
+  .servicios-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+
+  }
+
+  .servicios-sub {
+    text-align: center;
+    margin: 0;
+    opacity: 0.8;
+    margin-bottom: 30px;
+  }
+
+
+  /* =========================================
+    CARDS
+  ========================================= */
+  .service-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    gap: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    position: relative;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .card:hover {
+    border: 1px solid #fff;
+  }
+
+
+  /* =========================================
+    TIPOGRAFÍA / ELEMENTOS DE TARJETA
+  ========================================= */
   .card h5 {
     margin-top: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   .card span {
+    text-align: center;
     margin-bottom: 16px;
-    font-size: 12px;
+    font-size: 14px;
   }
+
+  .card h3 {
+    text-align: center;
+    margin: 0 30px 30px 30px;
+  }
+
   .card p {
     text-align: center;
-    font-weight: 100;
+
     color: var(--color-text);
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 12px;
   }
+
+  .cta-card-icon {
+    size: 64px;
+  }
+
+  .icon-chek {
+    color: var(--gold);
+    margin-right: 4px;
+  }
+
+  /* =========================================
+    PRECIOS
+  ========================================= */
   .precio-viejo {
     color: #a0a0a0;
     text-decoration: line-through;
-    font-size: 18px;
+    font-size: 28px;
   }
+
   .precio-nuevo {
-    color: #ffb300;
+    color: var(--gold);
     font-weight: 800;
-    font-size: 24px;
+    font-size: 36px;
   }
-}
 
-/* Cards */
-.service-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  gap: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: var(--transition);
-  position: relative;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+  /* =========================================
+    BOTÓN CTA
+  ========================================= */
+  .btn-cta-service {
+    margin-top: 20px;
+    padding: 12px 20px;
+    width: 35vh;
+    background: #ffb30000;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s ease;
+  }
 
-.card:hover {
-  border: 1px solid #fff;
-}
-
-/* Botón */
-.btn-cta-service {
-  margin-top: 20px;
-  padding: 12px 20px;
-  width: 35vh;
-  background: #ffb30000;
-  color: #ffffff;
-  font-weight: 600;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-
-.btn-cta-service:hover {
-  background: #ffca28;
-  transform: translateY(-2px);
-}
+  .btn-cta-service:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+  }
 
 
+  /* =========================================
+    RESPONSIVE (MOBILE)
+  ========================================= */
+  @media (max-width: 768px) {
+    .servicios-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-card {
+      padding: 0;
+      margin: 0 5px;
+    }
+
+    .card h3 {
+      text-align: center;
+      margin: 10px;
+      padding-bottom: 15px;
+    }
+
+    .card h5 {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    .card span {
+      margin-bottom: 16px;
+      font-size: 12px;
+    }
+
+    .card p {
+      text-align: center;
+      font-weight: 100;
+      color: var(--color-text);
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .precio-viejo {
+      font-size: 18px;
+    }
+
+    .precio-nuevo {
+      font-size: 24px;
+    }
+  }

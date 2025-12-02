@@ -15,14 +15,17 @@ export default function Servicios() {
     <section className="servicios-page fade-in">
       <div className="container">
 
-        <h1 className="servicios-title ">SERVICIOS</h1>
-        <h4 className="servicios-sub">
-          Soluciones web profesionales adaptadas a tus necesidades
-        </h4>
+        <div className="servicios-header">
+          <h1 className="servicios-title">SERVICIOS</h1>
+          <h4 className="servicios-sub">
+            Soluciones web profesionales adaptadas a tus necesidades
+          </h4>
+        </div>
 
+
+        {/* ------------------ LANDING PAGE ------------------ */}
         <div className="servicios-grid">
 
-          {/* ------------------ LANDING PAGE ------------------ */}
           <article className="card glass interactive service-card">
             <i className="cta-card-icon" style={{ fontSize: "2.5rem" }}>
               <FaRocket />
@@ -45,7 +48,7 @@ export default function Servicios() {
               "Formulario de contacto",
               "Google Maps + WhatsApp",
               "Hosting + dominio .com por 1 año",
-              "Mantenimiento GRATIS por 1 mes",
+              "Mantenimiento GRATIS por 4 meses",
               "Entrega en 10 días hábiles",
             ].map((item, index) => (
               <p key={index}>
@@ -85,7 +88,7 @@ export default function Servicios() {
               "Google Maps + WhatsApp",
               "Hosting + Dominio .com por 1 año",
               "Mantenimiento GRATIS 1 mes",
-              "5 Emails corporativos incluidos",
+              "Mantenimiento GRATIS 4 mes",
               "Entrega en 10 días hábiles",
             ].map((item, index) => (
               <p key={index}>
@@ -114,6 +117,7 @@ export default function Servicios() {
               Presencia web completa con múltiples secciones. Perfecta para cualquier empresa o negocio que busca proyectar seriedad y profesionalismo.
             </span>
 
+            <h5 className="precio-viejo">ARS $690.000</h5>
             <h3 className="precio-nuevo">ARS $510.000</h3>
 
             {[
@@ -124,7 +128,7 @@ export default function Servicios() {
               "Google Maps + WhatsApp",
               "Carrito de compras",
               "Gestión de stock",
-              "Mantenimiento GRATIS 1 mes",
+              "Mantenimiento GRATIS 6 meses",
               "Entrega en 14 días hábiles",
             ].map((item, index) => (
               <p key={index}>
@@ -162,7 +166,7 @@ export default function Servicios() {
               "Valores corporativos",
               "Google Maps + WhatsApp",
               "Hosting + Dominio .com por 1 año",
-              "Mantenimiento GRATIS 1 mes",
+              "Mantenimiento GRATIS 4 meses",
               "5 Emails corporativos incluidos",
               "Entrega en 10 días hábiles",
             ].map((item, index) => (
@@ -203,7 +207,7 @@ export default function Servicios() {
               "Fácil actualización",      
               "Diseño adaptable (mobile-first)",
               "Panel para editar el menú cuando quieras",
-              "Soporte técnico por 30 días",
+              "Soporte técnico por 3 meses",
               "Entrega en 10 días hábiles",
             ].map((item, index) => (
               <p key={index}>
@@ -240,10 +244,10 @@ export default function Servicios() {
               "Animaciones suaves y modernas",
               "Fotos y galería opcional",
               "Cuenta regresiva al evento",
-              "Mapa interactivo + WhatsApp",
               "Formulario de confirmación (RSVP)",
               "Código QR para compartir fácilmente",
               "Versión para celular, tablet y desktop",
+              "Soporte técnico hasta el dia del evento",
               "Entrega en 10 días hábiles"
             ].map((item, index) => (
               <p key={index}>

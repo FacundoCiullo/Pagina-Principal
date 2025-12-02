@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import Testimonials from "../components/Testimonials";
-import { FaCode } from "react-icons/fa";
+import Button from "react-bootstrap/Button";
+import { LuMoveRight } from "react-icons/lu";
+import { FaRocket } from "react-icons/fa";
+import { FaBuilding } from "react-icons/fa";
+import { FaShoppingCart  } from "react-icons/fa";
+
 import "../styles/home.css";
 
 export default function Home() {
@@ -51,40 +56,118 @@ export default function Home() {
       {/* SERVICIOS */}
       <section id="servicios" className="section">
         <div className="container">
-          <h2 className="section-title">Servicios</h2>
+          <h2 className="section-title">SERVICIOS EN OFERTA!</h2>
 
           <div className="cards-grid">
-            <article className="card glass interactive">
-              <div className="card-icon" aria-hidden="true"><FaCode /></div>
+
+            <article className="card glass interactive service-card">
+              <i className="cta-card-icon" style={{ fontSize: "2.5rem" }}>
+                <FaRocket />
+              </i>
+
               <h3>Landing Page</h3>
-              <p>Página única diseñada para captar clientes. Ideal para cualquier negocio que necesite presencia web rápida y efectiva.</p>
-              <span className="card-cta">Ver más →</span>
-              <div className="card-glow" />
+
+              <p className="servicios-sub">
+                Página única diseñada para captar clientes. Ideal para cualquier negocio que necesite presencia web rápida y efectiva.
+              </p>
+
+              <h5 className="precio-viejo">ARS $180.000</h5>
+              <h3 className="precio-nuevo">ARS $130.000</h3>
+
+              {[
+                "Diseño 100% personalizado",
+                "Presentación del negocio",
+                "Hosting + dominio .com por 1 año",
+                "Mantenimiento GRATIS por 4 meses",
+                "Entrega en 10 días hábiles",
+                "...",
+              ].map((item, index) => (
+                <p key={index}>
+                  <LuMoveRight className="icon-chek" /> {item}
+                </p>
+              ))}
+              <Link to="/contacto">
+                <Button 
+                  className="btn-cta-service"
+                  variant="outline-light" 
+                  size="lg" >
+                    Ver Mas
+                </Button>
+              </Link>
             </article>
 
-            <article className="card glass interactive">
-              <div className="card-icon" aria-hidden="true">🛒</div>
+            <article className="card glass interactive service-card">
+              <i className="cta-card-icon" style={{ fontSize: "2.5rem" }}>
+                <FaBuilding />
+              </i>
+
               <h3>Web Institucional</h3>
-              <p>Presencia web con múltiples secciones. Perfecta para empresas o negocios que buscan proyectar profesionalismo.</p>
-              <span className="card-cta">Ver más →</span>
-              <div className="card-glow" />
+
+              <span className="servicios-sub">
+                Presencia web con múltiples secciones. Perfecta para empresas o negocios que buscan proyectar profesionalismo.
+              </span>
+
+              <h5 className="precio-viejo">ARS $280.000</h5>
+              <h3 className="precio-nuevo">ARS $190.000</h3>
+
+              {[
+                "Hasta 6 páginas completas",
+                "Valores corporativos",
+                "Hosting + Dominio .com por 1 año",
+                "Mantenimiento GRATIS 6 mes",
+                "Entrega en 10 días hábiles",
+                "...",
+              ].map((item, index) => (
+                <p key={index}>
+                  <LuMoveRight className="icon-chek" /> {item}
+                </p>
+              ))}
+              <Link to="/contacto">
+                <Button 
+                  className="btn-cta-service"
+                  variant="outline-light" 
+                  size="lg" >
+                    Ver Mas
+                </Button>
+              </Link>
             </article>
 
-            <article className="card glass interactive">
-              <div className="card-icon" aria-hidden="true">📱</div>
-              <h3>E-COMMERCE</h3>
-              <p>Presencia web completa con múltiples secciones. Perfecta para cualquier empresa o negocio que busca proyectar seriedad y profesionalismo.</p>
-              <span className="card-cta">Ver más →</span>
-              <div className="card-glow" />
+            <article className="card glass interactive service-card">
+              <i className="cta-card-icon" style={{ fontSize: "2.5rem" }}>
+                <FaShoppingCart  />
+              </i>
+
+              <h3>E-commerce</h3>
+
+              <span className="servicios-sub">
+                Presencia web completa con múltiples secciones. Perfecta para cualquier empresa o negocio que busca proyectar seriedad y profesionalismo.
+              </span>
+
+              <h5 className="precio-viejo">ARS $690.000</h5>
+              <h3 className="precio-nuevo">ARS $510.000</h3>
+
+              {[
+                "Panel de administración",
+                "Carrito de compras",
+                "Gestión de stock",
+                "Mantenimiento GRATIS 6 meses",
+                "Entrega en 14 días hábiles",
+                "...",
+              ].map((item, index) => (
+                <p key={index}>
+                  <LuMoveRight className="icon-chek" /> {item}
+                </p>
+              ))}
+              <Link to="/contacto">
+                <Button 
+                  className="btn-cta-service"
+                  variant="outline-light" 
+                  size="lg" >
+                    Ver Mas
+                </Button>
+              </Link>
             </article>
 
-            <article className="card glass interactive">
-              <div className="card-icon" aria-hidden="true">⚙️</div>
-              <h3>MENÚ DIGITAL</h3>
-              <p>Carta digital profesional para restaurantes. Tus clientes pueden ver el menú desde su celular escaneando un código QR.</p>
-              <span className="card-cta">Ver más →</span>
-              <div className="card-glow" />
-            </article>
           </div>
         </div>
       </section>
