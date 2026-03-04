@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Menú Digital",
+    "description": "Sistema digital para restaurantes con panel editable.",
+    "image": "/images/menu-demo.jpg",
+    "link": "https://demo-menudigital.netlify.app/"
+  },
+  {
+    "id": 2,
+    "title": "Landing Startup",
+    "description": "Landing moderna tipo SaaS tech.",
+    "image": "/images/startup-demo.jpg",
+    "link": "#"
+  }
+]

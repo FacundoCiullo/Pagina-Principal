@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Landing Page Profesional",
+    "price": "Desde USD 150",
+    "features": [
+      "Diseño moderno y personalizado",
+      "100% responsive (mobile-first)",
+      "Optimización de velocidad",
+      "SEO básico",
+      "Formulario de contacto",
+      "Integración con WhatsApp",
+      "Dominio y hosting (asesoramiento)",
+      "Deploy en Netlify o Vercel"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Web Corporativa",
+    "price": "Desde USD 300",
+    "features": [
+      "Hasta 5 secciones",
+      "Diseño institucional profesional",
+      "Panel autoadministrable",
+      "Optimización SEO avanzada",
+      "Integración con redes sociales",
+      "Mapa de ubicación",
+      "Formulario avanzado",
+      "Optimización de rendimiento"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "E-commerce",
+    "price": "Desde USD 500",
+    "features": [
+      "Carrito de compras",
+      "Pasarela de pago (MercadoPago / Stripe)",
+      "Gestión de productos",
+      "Panel de administración",
+      "Control de stock",
+      "Filtros por categoría",
+      "Emails automáticos",
+      "Optimización de conversión"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Menú Digital para Restaurantes",
+    "price": "Desde USD 250",
+    "features": [
+      "Carta digital con QR",
+      "Panel editable",
+      "Categorías dinámicas",
+      "Imagen de productos",
+      "Actualización en tiempo real",
+      "Optimización mobile",
+      "Hosting incluido",
+      "Soporte técnico"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Sistema Web Personalizado",
+    "price": "Presupuesto a medida",
+    "features": [
+      "Desarrollo a medida",
+      "Panel administrativo",
+      "Base de datos",
+      "Autenticación de usuarios",
+      "Roles y permisos",
+      "Integración con APIs",
+      "Escalabilidad",
+      "Arquitectura profesional"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Mantenimiento Web",
+    "price": "Desde USD 50 / mes",
+    "features": [
+      "Actualización de contenido",
+      "Backups periódicos",
+      "Monitoreo de seguridad",
+      "Optimización de rendimiento",
+      "Corrección de errores",
+      "Soporte técnico prioritario",
+      "Actualización de dependencias",
+      "Pequeñas mejoras mensuales"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Optimización y Performance",
+    "price": "Desde USD 120",
+    "features": [
+      "Mejora de velocidad de carga",
+      "Optimización de imágenes",
+      "Lazy loading",
+      "Minificación de código",
+      "Análisis con Lighthouse",
+      "Core Web Vitals",
+      "Mejora de SEO técnico",
+      "Refactorización básica"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Rediseño Web",
+    "price": "Desde USD 200",
+    "features": [
+      "Modernización visual",
+      "Reestructuración UX/UI",
+      "Mejora de navegación",
+      "Optimización mobile",
+      "Reorganización de contenido",
+      "Actualización tecnológica",
+      "Mejora de conversión",
+      "Adaptación a branding actual"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Branding Digital para Startups",
+    "price": "Desde USD 180",
+    "features": [
+      "Identidad visual básica",
+      "Paleta de colores",
+      "Tipografías estratégicas",
+      "Manual básico de marca",
+      "Diseño de logo (si es necesario)",
+      "Mockups web",
+      "Estilo visual coherente",
+      "Lineamientos para redes sociales"
+    ]
+  }
+]
