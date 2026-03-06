@@ -1,26 +1,14 @@
+
   /* =========================================================
-    1️⃣ DESIGN TOKENS (Variables Globales)
+    🌍 GLOBAL TOKENS – Variables base del proyecto
   ========================================================= */
 
-  /* 🎨 Themes */
-  [data-theme="light"] {
-    --color-primary: #000000;
-    --color-accent: #ff4900;
-    --color-bg-primary: #c1c1c1;
-    --color-bg-secondary: #3a3a3a;
-    --color-text: #111;
-  }
-
-  [data-theme="dark"] {
-    --color-primary: #ff4900;
-    --color-accent: #c1c1c1;
-    --color-bg-primary: #2a2a2a;
-    --color-bg-secondary: #3a3a3a;
-    --color-text: #ffffff;
-  }
-
-  /* 🌍 Global Tokens */
   :root {
+
+    /* =====================================================
+      🧱 BASE
+    ===================================================== */
+
     --bg: #2f3648;
     --muted: rgba(255, 255, 255, 0.75);
     --soft: rgba(255, 255, 255, 0.12);
@@ -29,8 +17,75 @@
     --transition: 300ms cubic-bezier(.2,.9,.2,1);
     --radius: 12px;
     --max-width: 1500px;
+
+    --glass-bg: rgba(255,255,255,0.08);
+    --shadow-hero: 0 20px 60px rgba(0,0,0,0.5);
+    background: var(--glass-bg);
+    box-shadow: var(--shadow-hero);
+
+
+    /* =====================================================
+      📝 TEXT COLORS
+    ===================================================== */
+
+    --text-1: #ffffff;     /* blanco */
+    --text-2: #000000;     /* negro */
+    --text-3: #ff6600;     /* naranja principal */
+
+
+    /* =====================================================
+      🎨 BACKGROUND COLORS
+    ===================================================== */
+
+    --bg-1: #ffffff;       /* blanco */
+    --bg-2: #2f3648;       /* gris oscuro base */
+    --bg-3: #ff6600;       /* naranja */
+    --bg-4: #161616;       /* Oscuro */
+
+
+    /* =====================================================
+      🌈 GRADIENT COLORS (stops)
+    ===================================================== */
+
+    --gradient-1: #ff6600;
+    --gradient-2: #ff9a04df;
+    --gradient-3: #000000;
+    --gradient-4: #ffffff;
+    --gradient-5: #dd4b4b;
+
+
+    /* =====================================================
+      ⚡ PREMADE GRADIENTS (listos para usar)
+    ===================================================== */
+
+    --gradient-orange: linear-gradient(
+      135deg,
+      var(--gradient-1),
+      var(--gradient-2)
+    );
+
+    --gradient-dark: linear-gradient(
+      135deg,
+      var(--gradient-3),
+      #1a1a1a
+    );
+
+    --gradient-light: linear-gradient(
+      135deg,
+      var(--gradient-4),
+      #f3f3f3
+    );
+
+    --gradient-hero: linear-gradient(
+      135deg,
+      var(--gradient-1) 0%,
+      var(--gradient-2) 40%,
+      var(--gradient-3) 100%
+    );
+
   }
 
+  
 
   /* =========================================================
     2️⃣ RESET & BASE

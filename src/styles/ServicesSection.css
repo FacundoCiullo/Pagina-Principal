@@ -1,6 +1,6 @@
 .services-section {
-  padding: 120px 5%;
-  background: radial-gradient(circle at top, #2f3648 0%, #111 100%);
+  padding: 50px 5%;
+  background: var(--bg-4);
   color: white;
 }
 

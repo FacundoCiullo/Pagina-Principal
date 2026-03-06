@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Landing Page Profesional",
+    "icon": "rocket",
     "price": "Desde USD 150",
     "features": [
       "Diseño moderno y personalizado",
@@ -17,6 +18,7 @@
   {
     "id": 2,
     "title": "Web Corporativa",
+    "icon": "building",
     "price": "Desde USD 300",
     "features": [
       "Hasta 5 secciones",
@@ -32,6 +34,7 @@
   {
     "id": 3,
     "title": "E-commerce",
+    "icon": "cart",
     "price": "Desde USD 500",
     "features": [
       "Carrito de compras",
@@ -47,6 +50,7 @@
   {
     "id": 4,
     "title": "Menú Digital para Restaurantes",
+    "icon": "restaurant",
     "price": "Desde USD 250",
     "features": [
       "Carta digital con QR",
@@ -62,6 +66,7 @@
   {
     "id": 5,
     "title": "Sistema Web Personalizado",
+    "icon": "system",
     "price": "Presupuesto a medida",
     "features": [
       "Desarrollo a medida",
@@ -77,6 +82,7 @@
   {
     "id": 6,
     "title": "Mantenimiento Web",
+    "icon": "maintenance",
     "price": "Desde USD 50 / mes",
     "features": [
       "Actualización de contenido",
@@ -92,6 +98,7 @@
   {
     "id": 7,
     "title": "Optimización y Performance",
+    "icon": "speed",
     "price": "Desde USD 120",
     "features": [
       "Mejora de velocidad de carga",
@@ -107,6 +114,7 @@
   {
     "id": 8,
     "title": "Rediseño Web",
+    "icon": "design",
     "price": "Desde USD 200",
     "features": [
       "Modernización visual",
@@ -122,6 +130,7 @@
   {
     "id": 9,
     "title": "Branding Digital para Startups",
+    "icon": "branding",
     "price": "Desde USD 180",
     "features": [
       "Identidad visual básica",
