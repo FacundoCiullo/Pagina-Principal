@@ -41,17 +41,19 @@
     --bg-2: #2f3648;       /* gris oscuro base */
     --bg-3: #ff6600;       /* naranja */
     --bg-4: #161616;       /* Oscuro */
+    --bg-5: rgba(255,115,0,0.15);  /* marron */
+    --bg-6: rgba(168,85,247,0.15);  /* violeta */
 
 
     /* =====================================================
       🌈 GRADIENT COLORS (stops)
     ===================================================== */
 
+    --gradient-0: #dd4b4b;
     --gradient-1: #ff6600;
     --gradient-2: #ff9a04df;
     --gradient-3: #000000;
     --gradient-4: #ffffff;
-    --gradient-5: #dd4b4b;
 
 
     /* =====================================================
@@ -116,116 +118,15 @@
     color: inherit;
   }
 
-
-  /* =========================================================
-    3️⃣ LAYOUT SYSTEM
-  ========================================================= */
-
-  .container {
-    width: 90%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
-
-  /* Secciones */
-  .section {
-    padding: 6rem 0 4rem;
-  }
-
-  .section-title {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 34px;
-    font-weight: 600;
-  }
-
-  /* Responsive base */
-  @media (max-width: 760px) {
-    .container {
-      width: 94%;
-    }
-  }
-
   /* =========================================================
     4️⃣ GRID SYSTEM
   ========================================================= */
-
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-  }
 
   .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 18px;
   }
-
-
-  /* =========================================================
-    5️⃣ UI COMPONENTS (Reusable)
-  ========================================================= */
-
-  /* 🔘 Buttons */
-  .btn {
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 10px;
-    font-weight: 500;
-    transition: var(--transition);
-  }
-
-  .btn.primary {
-    background: var(--color-primary);
-    color: #000;
-  }
-
-  .btn.outline {
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--soft);
-    color: var(--muted);
-  }
-
-  /* 🧊 Glass Effect */
-  .glass {
-    background: var(--color-bg-primary);
-    border-radius: var(--radius);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(6px) saturate(120%);
-  }
-
-
-
-  /* =========================================================
-    6️⃣ CARDS (Base Reusable System)
-  ========================================================= */
-
-  .service-card,
-  .project-card {
-    padding: 2rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--glass-border);
-    transition: var(--transition);
-    background: var(--color-bg-primary);
-  }
-
-  .service-card h3,
-  .project-card h3 {
-    margin-bottom: 1rem;
-  }
-
-  .service-card p,
-  .project-card p {
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .service-card:hover,
-  .project-card:hover {
-    transform: translateY(-6px);
-  }
-
 
   /* =========================================================
     7️⃣ ANIMATIONS
@@ -246,3 +147,24 @@
       transform: translateY(0); 
     }
   }
+
+  /* =========================================================
+    7️⃣ DIVISOR
+  ========================================================= */
+
+
+  .section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.1),
+    transparent
+  );
+  margin: 80px 0;
+}
+
+
+  /* =========================================================
+    7️⃣ 
+  ========================================================= */

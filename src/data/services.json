@@ -3,7 +3,8 @@
     "id": 1,
     "title": "Landing Page Profesional",
     "icon": "rocket",
-    "price": "Desde USD 150",
+    "price": "Desde USD 200",
+    "description": "Una landing page moderna pensada para captar clientes y presentar tu negocio de forma clara, rápida y profesional. Ideal para emprendedores, profesionales independientes o campañas de marketing.",
     "features": [
       "Diseño moderno y personalizado",
       "100% responsive (mobile-first)",
@@ -19,7 +20,8 @@
     "id": 2,
     "title": "Web Corporativa",
     "icon": "building",
-    "price": "Desde USD 300",
+    "price": "Desde USD 400",
+    "description": "Sitio institucional profesional para empresas que necesitan presencia online sólida. Perfecto para mostrar servicios, historia de la empresa y generar confianza con clientes.",
     "features": [
       "Hasta 5 secciones",
       "Diseño institucional profesional",
@@ -35,7 +37,8 @@
     "id": 3,
     "title": "E-commerce",
     "icon": "cart",
-    "price": "Desde USD 500",
+    "price": "Desde USD 750",
+    "description": "Tienda online completa para vender productos o servicios por internet. Incluye gestión de productos, pagos online y panel administrativo para controlar todo el negocio.",
     "features": [
       "Carrito de compras",
       "Pasarela de pago (MercadoPago / Stripe)",
@@ -49,9 +52,10 @@
   },
   {
     "id": 4,
-    "title": "Menú Digital para Restaurantes",
+    "title": "Menú Digital",
     "icon": "restaurant",
-    "price": "Desde USD 250",
+    "price": "Desde USD 300",
+    "description": "Sistema de carta digital para restaurantes y bares con acceso mediante QR. Permite actualizar productos fácilmente y mostrar imágenes de platos desde cualquier dispositivo.",
     "features": [
       "Carta digital con QR",
       "Panel editable",
@@ -68,6 +72,7 @@
     "title": "Sistema Web Personalizado",
     "icon": "system",
     "price": "Presupuesto a medida",
+    "description": "Desarrollo de aplicaciones web personalizadas según las necesidades específicas del cliente. Ideal para startups o empresas que requieren soluciones digitales a medida.",
     "features": [
       "Desarrollo a medida",
       "Panel administrativo",
@@ -83,7 +88,8 @@
     "id": 6,
     "title": "Mantenimiento Web",
     "icon": "maintenance",
-    "price": "Desde USD 50 / mes",
+    "price": "Desde USD 40 / mes",
+    "description": "Servicio mensual para mantener tu sitio actualizado, seguro y funcionando correctamente. Ideal para negocios que quieren olvidarse de los problemas técnicos.",
     "features": [
       "Actualización de contenido",
       "Backups periódicos",
@@ -99,7 +105,8 @@
     "id": 7,
     "title": "Optimización y Performance",
     "icon": "speed",
-    "price": "Desde USD 120",
+    "price": "Desde USD 150",
+    "description": "Mejoramos la velocidad, rendimiento y posicionamiento técnico de tu sitio web para lograr mejores resultados en buscadores y experiencia de usuario.",
     "features": [
       "Mejora de velocidad de carga",
       "Optimización de imágenes",
@@ -115,7 +122,8 @@
     "id": 8,
     "title": "Rediseño Web",
     "icon": "design",
-    "price": "Desde USD 200",
+    "price": "Desde USD 350",
+    "description": "Actualizamos el diseño de tu sitio web para hacerlo más moderno, atractivo y optimizado para conversiones, manteniendo tu contenido actual.",
     "features": [
       "Modernización visual",
       "Reestructuración UX/UI",
@@ -131,7 +139,8 @@
     "id": 9,
     "title": "Branding Digital para Startups",
     "icon": "branding",
-    "price": "Desde USD 180",
+    "price": "Desde USD 250",
+    "description": "Definición de identidad visual para proyectos digitales o startups que necesitan una marca coherente para su presencia online.",
     "features": [
       "Identidad visual básica",
       "Paleta de colores",

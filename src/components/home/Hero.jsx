@@ -26,25 +26,26 @@ export default function Hero() {
           </h1>
 
           <p>
-            Diseño personalizado, código limpio, alto rendimiento y enfoque
-            en conversión. Desarrollo soluciones que impulsan tu marca y
+            Diseño profesional, optimización para celulares
+            y velocidad pensada para convertir visitas en ventas. Desarrollo soluciones que impulsan tu marca y
             atraen más clientes.
+            Ideal para negocios, emprendedores y startups.
           </p>
 
           <div className="hero-buttons">
             <a href="#servicios" className="btn-primary">
-              Servicios
+              Ver servicios
             </a>
 
             <a href="#contacto" className="btn-secondary">
-              Hablemos
+              Solicitar presupuesto
             </a>
           </div>
 
           <div className="hero-stats">
             <div className="stat">
               <span>+25</span>
-              <p>Proyectos</p>
+              <p>Proyectos desarrollados</p>
             </div>
 
             <div className="stat">
@@ -67,8 +68,12 @@ export default function Hero() {
             Landing + eCommerce — Performance y crecimiento en ventas.
           </p>
 
-          <div className="hero-tech">
-            HTML · CSS · SEO · JavaScript · React
+          <div className="tech-stack">
+            <span>React</span>
+            <span>Vite</span>
+            <span>Node</span>
+            <span>Netlify</span>
+            <span>Vercel</span>
           </div>
         </div>
 

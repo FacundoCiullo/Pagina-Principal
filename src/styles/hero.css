@@ -1,275 +1,252 @@
-/* ========================================
-  HERO SECTION
-======================================== */
+  /* ========================================
+    HERO SECTION
+  ======================================== */
 
-.hero {
-  position: relative;
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  padding: 0 6%;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-
-/* ========================================
-  OVERLAY OSCURO + BLUR
-======================================== */
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    90deg,
-    var(--gradient-3) 0%,
-    rgba(0,0,0,0.65) 40%,
-    var(--gradient-3) 100%
-  );
-
-  backdrop-filter: blur(5px);
-  z-index: 0;
-}
-
-/* ========================================
-  FRANJA NARANJA
-======================================== */
-
-.hero-shape {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 420px;
-  height: 100%;
-
-  background: linear-gradient(
-    180deg,
-    var(--gradient-2),
-    var(--gradient-1)
-  );
-
-  clip-path: polygon(
-    35% 0%,
-    100% 0%,
-    100% 100%,
-    60% 100%
-  );
-
-  z-index: 1;
-}
-
-/* ========================================
-  HERO LAYOUT
-======================================== */
-
-.hero-container {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-}
-
-/* ========================================
-  HERO LEFT
-======================================== */
-
-.hero-left {
-  max-width: 600px;
-  color: var(--text-1);
-}
-
-.hero-left h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-/* ========================================
-  HIGHLIGHT TEXT
-======================================== */
-
-.hero-highlight {
-
-  background: linear-gradient(
-    90deg,
-    var(--gradient-1),
-    
-    var(--gradient-2),
-    var(--gradient-4),
-    var(--gradient-2),
-    var(--gradient-1)
-  );
-
-  background-size: 200% auto;
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  -webkit-text-fill-color: transparent;
-
-  animation: heroShine 4s linear infinite;
-}
-
-@keyframes heroShine {
-  to {
-    background-position: 200% center;
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
   }
-}
 
-/* ========================================
-  PARAGRAPH
-======================================== */
+  /* ========================================
+    OVERLAY OSCURO + BLUR
+  ======================================== */
 
-.hero-left p {
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
 
-/* ========================================
-  BUTTONS
-======================================== */
+    background: linear-gradient(
+      90deg,
+      var(--gradient-3) 0%,
+      rgba(0,0,0,0.65) 40%,
+      var(--gradient-3) 100%
+    );
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
+    backdrop-filter: blur(5px);
+    z-index: 0;
+  }
 
-.btn-primary {
+  /* ========================================
+    FRANJA NARANJA
+  ======================================== */
 
-  background: linear-gradient(
-    90deg,
-    var(--gradient-1)
-  );
+  .hero-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 420px;
+    height: 100%;
 
-  color: var(--text-1);
+    background: linear-gradient(
+      180deg,
+          var(--gradient-0),
+      var(--gradient-2),
+      
+      var(--gradient-1)
+    );
 
-  padding: 0.8rem 1.6rem;
+    clip-path: polygon(
+      35% 0%,
+      100% 0%,
+      100% 100%,
+      60% 100%
+    );
 
-  border-radius: var(--radius);
-  text-decoration: none;
+    z-index: 1;
+  }
 
-  font-weight: 600;
+  /* ========================================
+    HERO LAYOUT
+  ======================================== */
 
-  transition: var(--transition);
-}
+  .hero-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-}
+  /* ========================================
+    HERO LEFT
+  ======================================== */
 
-.btn-secondary {
+  .hero-left {
+    max-width: 600px;
+    color: var(--text-1);
+  }
 
-  border: 1px solid var(--glass-border);
+  .hero-left h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
 
-  color: var(--text-1);
+  /* ========================================
+    HIGHLIGHT TEXT
+  ======================================== */
 
-  padding: 0.8rem 1.6rem;
+  .hero-highlight {
 
-  border-radius: var(--radius);
-  text-decoration: none;
+    background: linear-gradient(
+      90deg,
+      var(--gradient-1),
+      var(--gradient-4),
+      var(--gradient-1)
+    );
 
-  font-weight: 600;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heroShine 4s linear infinite;
+  }
 
-  transition: var(--transition);
-}
+  @keyframes heroShine {
+    to {
+      background-position: 200% center;
+    }
+  }
 
-.btn-secondary:hover {
-  border-color: var(--gradient-1);
-}
+  /* ========================================
+    PARAGRAPH
+  ======================================== */
 
-/* ========================================
-  STATS
-======================================== */
+  .hero-left p {
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
 
-.hero-stats {
-  display: flex;
-  gap: 2.5rem;
-}
+  /* ========================================
+    BUTTONS
+  ======================================== */
 
-.stat span {
-  color: var(--text-3);
-  font-weight: 700;
-  font-size: 1.4rem;
-}
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
 
-.stat p {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
+  .btn-primary {
 
-/* ========================================
-  FLOATING CARD
-======================================== */
+    background: linear-gradient(
+      90deg,
+      var(--gradient-1)
+    );
 
-.hero-card {
+    color: var(--text-1);
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
 
-  padding: 1.8rem;
+  .btn-primary:hover {
+    transform: translateY(-2px);
+  }
 
-  background: var(--soft);
+  .btn-secondary {
+    border: 1px solid var(--glass-border);
+    color: var(--text-1);
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
 
-  border: 1px solid var(--glass-border);
+  .btn-secondary:hover {
+    border-color: var(--gradient-1);
+  }
 
-  border-radius: var(--radius);
+  /* ========================================
+    STATS
+  ======================================== */
 
-  backdrop-filter: blur(12px);
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+  }
 
-  color: var(--text-1);
+  .stat span {
+    color: var(--text-3);
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
 
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-}
+  .stat p {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
 
-.hero-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
-}
+  /* ========================================
+    FLOATING CARD
+  ======================================== */
 
-.hero-card-desc {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
+  .hero-card {
+    padding: 1.8rem;
+    background: var(--soft);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    backdrop-filter: blur(12px);
+    color: var(--text-1);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
 
-.hero-tech {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
+  .hero-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
 
-/* ========================================
-  MOBILE
-======================================== */
+  .hero-card-desc {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
 
-@media (max-width: 900px) {
+  .hero-tech {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
 
-.hero {
-  height: auto;
-  padding: 6rem 6%;
-}
+  /* ========================================
+    MOBILE
+  ======================================== */
 
-.hero-container {
-  flex-direction: column;
-  align-items: flex-start;
-}
+  @media (max-width: 900px) {
+    .hero {
+      height: auto;
+      padding: 6rem 6%;
+    }
 
-.hero-card {
-  margin-top: 3rem;
-}
+    .hero-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-.hero-left h1 {
-  font-size: 2.2rem;
-}
+    .hero-card {
+      margin-top: 3rem;
+    }
 
-.hero-stats {
-  gap: 1.5rem;
-}
+    .hero-left h1 {
+      font-size: 2.2rem;
+    }
 
-.hero-shape {
-  display: none;
-}
+    .hero-stats {
+      gap: 1.5rem;
+    }
 
-}
+    .hero-shape {
+      display: none;
+    }
+  }
