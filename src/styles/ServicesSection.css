@@ -153,9 +153,7 @@
 
   pointer-events:none;
 }
-.servive-modal::after{
-      
-}
+
   .modal-close{
     position:absolute;
     top:15px;

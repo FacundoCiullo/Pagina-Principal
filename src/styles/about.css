@@ -1,0 +1,98 @@
+.about-section {
+  position: relative;
+  padding: 90px 5%;
+  margin-top: -130px; /* lo sube hacia el hero */
+  margin-bottom: -130px; /* lo sube hacia el hero */
+  z-index: 10;
+}
+
+/* CONTENEDOR NEGRO */
+
+.about-bar {
+  background: #0f0f0f;
+  border-radius: 16px;
+
+  padding: 40px;
+
+  max-width: 1000px;      /* ancho más chico */
+  margin: 0 auto;        /* centrado */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+
+}
+
+/* TEXTO */
+
+.about-intro {
+  max-width: 200px;
+}
+
+.about-intro h3 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.about-intro p {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* CARDS */
+
+.about-cards {
+  display: flex;
+  gap: 18px;
+}
+
+/* TARJETAS */
+
+.about-card {
+  background: #f5c518;
+  color: black;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  width: 180px;
+
+  transition: 0.25s;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h4 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.about-card p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .about-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-card {
+    width: 100%;
+  }
+
+}

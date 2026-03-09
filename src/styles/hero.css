@@ -1,252 +1,299 @@
-  /* ========================================
-    HERO SECTION
-  ======================================== */
+/* ========================================
+  HERO SECTION
+======================================== */
+
+.hero {
+  position: relative;
+  z-index: 1;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  padding: 0 6%;
+  overflow: hidden;
+
+  /* Fondo startup tech */
+  background:
+    radial-gradient(circle at 20% 30%, rgb(255, 119, 0), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 119, 0, 0.607), transparent 50%),
+    #0a0a0a;
+}
+
+/* ========================================
+  GRID TECNOLÓGICO SUAVE
+======================================== */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+  opacity: 0.25;
+
+  z-index: 0;
+}
+
+/* ========================================
+  OVERLAY OSCURO + BLUR
+======================================== */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    var(--gradient-3) 0%,
+    rgba(0,0,0,0.65) 40%,
+    var(--gradient-3) 100%
+  );
+
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+/* ========================================
+  FRANJA NARANJA
+======================================== */
+
+.hero-shape {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 420px;
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    var(--gradient-0),
+    var(--gradient-2),
+    var(--gradient-1)
+  );
+
+  clip-path: polygon(
+    35% 0%,
+    100% 0%,
+    100% 100%,
+    60% 100%
+  );
+
+  z-index: 2;
+}
+
+/* ========================================
+  HERO LAYOUT
+======================================== */
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+/* ========================================
+  HERO LEFT
+======================================== */
+
+.hero-left {
+  max-width: 600px;
+  color: var(--text-1);
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* ========================================
+  HIGHLIGHT TEXT
+======================================== */
+
+.hero-highlight {
+  background: linear-gradient(
+    90deg,
+    var(--gradient-1),
+    var(--gradient-2),
+    var(--gradient-1)
+  );
+
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: heroShine 4s linear infinite;
+}
+
+@keyframes heroShine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ========================================
+  PARAGRAPH
+======================================== */
+
+.hero-left p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+  BUTTONS
+======================================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+
+  background: linear-gradient(
+    90deg,
+    var(--gradient-1)
+  );
+
+  color: var(--text-1);
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 1px solid var(--glass-border);
+  color: var(--text-1);
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--gradient-1);
+}
+
+/* ========================================
+  STATS
+======================================== */
+
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.stat span {
+  color: var(--text-3);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.stat p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ========================================
+  FLOATING CARD
+======================================== */
+
+.hero-card {
+  padding: 1.8rem;
+  background: var(--soft);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+  color: var(--text-1);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.hero-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.hero-card-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.hero-tech {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ========================================
+  FLOAT ANIMATION
+======================================== */
+
+@keyframes floatCard {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* ========================================
+  MOBILE
+======================================== */
+
+@media (max-width: 900px) {
 
   .hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 6%;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+    height: auto;
+    padding: 6rem 6%;
   }
-
-  /* ========================================
-    OVERLAY OSCURO + BLUR
-  ======================================== */
-
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-      90deg,
-      var(--gradient-3) 0%,
-      rgba(0,0,0,0.65) 40%,
-      var(--gradient-3) 100%
-    );
-
-    backdrop-filter: blur(5px);
-    z-index: 0;
-  }
-
-  /* ========================================
-    FRANJA NARANJA
-  ======================================== */
-
-  .hero-shape {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 420px;
-    height: 100%;
-
-    background: linear-gradient(
-      180deg,
-          var(--gradient-0),
-      var(--gradient-2),
-      
-      var(--gradient-1)
-    );
-
-    clip-path: polygon(
-      35% 0%,
-      100% 0%,
-      100% 100%,
-      60% 100%
-    );
-
-    z-index: 1;
-  }
-
-  /* ========================================
-    HERO LAYOUT
-  ======================================== */
 
   .hero-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 2;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  /* ========================================
-    HERO LEFT
-  ======================================== */
-
-  .hero-left {
-    max-width: 600px;
-    color: var(--text-1);
+  .hero-card {
+    margin-top: 3rem;
   }
 
   .hero-left h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    font-size: 2.2rem;
   }
-
-  /* ========================================
-    HIGHLIGHT TEXT
-  ======================================== */
-
-  .hero-highlight {
-
-    background: linear-gradient(
-      90deg,
-      var(--gradient-1),
-      var(--gradient-4),
-      var(--gradient-1)
-    );
-
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: heroShine 4s linear infinite;
-  }
-
-  @keyframes heroShine {
-    to {
-      background-position: 200% center;
-    }
-  }
-
-  /* ========================================
-    PARAGRAPH
-  ======================================== */
-
-  .hero-left p {
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-
-  /* ========================================
-    BUTTONS
-  ======================================== */
-
-  .hero-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .btn-primary {
-
-    background: linear-gradient(
-      90deg,
-      var(--gradient-1)
-    );
-
-    color: var(--text-1);
-    padding: 0.8rem 1.6rem;
-    border-radius: var(--radius);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-  }
-
-  .btn-primary:hover {
-    transform: translateY(-2px);
-  }
-
-  .btn-secondary {
-    border: 1px solid var(--glass-border);
-    color: var(--text-1);
-    padding: 0.8rem 1.6rem;
-    border-radius: var(--radius);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-  }
-
-  .btn-secondary:hover {
-    border-color: var(--gradient-1);
-  }
-
-  /* ========================================
-    STATS
-  ======================================== */
 
   .hero-stats {
-    display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
 
-  .stat span {
-    color: var(--text-3);
-    font-weight: 700;
-    font-size: 1.4rem;
+  .hero-shape {
+    display: none;
   }
 
-  .stat p {
-    font-size: 0.9rem;
-    color: var(--muted);
-  }
-
-  /* ========================================
-    FLOATING CARD
-  ======================================== */
-
-  .hero-card {
-    padding: 1.8rem;
-    background: var(--soft);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius);
-    backdrop-filter: blur(12px);
-    color: var(--text-1);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  }
-
-  .hero-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .hero-card-desc {
-    font-size: 0.95rem;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
-
-  .hero-tech {
-    font-size: 0.8rem;
-    color: var(--muted);
-  }
-
-  /* ========================================
-    MOBILE
-  ======================================== */
-
-  @media (max-width: 900px) {
-    .hero {
-      height: auto;
-      padding: 6rem 6%;
-    }
-
-    .hero-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .hero-card {
-      margin-top: 3rem;
-    }
-
-    .hero-left h1 {
-      font-size: 2.2rem;
-    }
-
-    .hero-stats {
-      gap: 1.5rem;
-    }
-
-    .hero-shape {
-      display: none;
-    }
-  }
+}

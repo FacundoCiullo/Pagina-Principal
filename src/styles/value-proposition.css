@@ -1,0 +1,87 @@
+.value-section {
+  padding: 120px 5%;
+  background: var(--bg-5);
+  color: white;
+}
+
+.value-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.value-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.value-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.value-header p {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.8;
+}
+
+/* GRID */
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 30px;
+}
+
+/* CARD */
+
+.value-box {
+  background: var(--bg-2);
+  padding: 35px;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.value-box:hover {
+  transform: translateY(-6px);
+}
+
+/* ICON */
+
+.value-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.value-box h3 {
+  margin-bottom: 10px;
+}
+
+/* BENTO GRID SIZES */
+
+.box-wide {
+  grid-column: span 1;
+}
+
+.box-large {
+  grid-column: span 2;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .box-wide,
+  .box-large {
+    grid-column: span 1;
+  }
+
+}

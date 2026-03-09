@@ -1,13 +1,11 @@
 import "../../styles/hero.css";
-import heroBg from "../../assets/hero-bg.jpg";
+
 
 export default function Hero() {
   return (
     <section
       className="hero"
-      style={{
-        backgroundImage: `url(${heroBg})`
-      }}
+      
     >
       <div className="hero-overlay"></div>
 
@@ -23,6 +21,7 @@ export default function Hero() {
               experiencias
             </span>{" "}
             digitales
+            rápidas, modernas y pensadas para vender
           </h1>
 
           <p>
@@ -44,19 +43,20 @@ export default function Hero() {
 
           <div className="hero-stats">
             <div className="stat">
-              <span>+25</span>
-              <p>Proyectos desarrollados</p>
+              <span>+20</span>
+              <p>Proyectos</p>
             </div>
 
             <div className="stat">
-              <span>98%</span>
-              <p>Satisfacción</p>
+              <span>100%</span>
+              <p>responsive</p>
             </div>
 
             <div className="stat">
-              <span>+5</span>
-              <p>Experiencia</p>
+              <span>+3</span>
+              <p>Años de Experiencia</p>
             </div>
+
           </div>
 
         </div>
