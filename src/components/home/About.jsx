@@ -14,17 +14,17 @@ export default function About() {
         <div className="about-cards">
 
           <div className="about-card">
-            <h4>⚡ Performance</h4>
+            <h4>Performance</h4>
             <p>Webs optimizadas para velocidad y SEO.</p>
           </div>
 
           <div className="about-card">
-            <h4>🎨 Diseño</h4>
+            <h4>Diseño</h4>
             <p>Interfaces modernas enfocadas en UX.</p>
           </div>
 
           <div className="about-card">
-            <h4>🔧 Soporte</h4>
+            <h4>Soporte</h4>
             <p>Mantenimiento y mejoras continuas.</p>
           </div>
 

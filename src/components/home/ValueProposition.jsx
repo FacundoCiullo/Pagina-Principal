@@ -2,6 +2,30 @@ import "../../styles/value-proposition.css";
 import { FaMobileAlt, FaBolt, FaShoppingCart, FaChartLine } from "react-icons/fa";
 
 export default function ValueProposition() {
+
+  const values = [
+    {
+      icon: FaMobileAlt,
+      title: "Diseño Responsive",
+      text: "Sitios web que funcionan perfectamente en celulares, tablets y computadoras."
+    },
+    {
+      icon: FaBolt,
+      title: "Velocidad Optimizada",
+      text: "Páginas rápidas y optimizadas para mejorar la experiencia del usuario y el posicionamiento en buscadores."
+    },
+    {
+      icon: FaShoppingCart,
+      title: "Ventas Online",
+      text: "Desarrollo de tiendas online y sistemas para vender productos o servicios en internet."
+    },
+    {
+      icon: FaChartLine,
+      title: "Crecimiento Digital",
+      text: "Estrategias digitales enfocadas en atraer clientes y mejorar la presencia online de tu negocio."
+    }
+  ];
+
   return (
     <section className="value-section">
 
@@ -15,52 +39,23 @@ export default function ValueProposition() {
           </p>
         </div>
 
-        <div className="value-grid">
+        <div className="value-row">
 
-          <div className="value-box box-wide">
-            <FaMobileAlt className="value-icon"/>
-            <h3>Diseño Responsive</h3>
-            <p>
-              Sitios web que funcionan perfectamente en celulares,
-              tablets y computadoras.
-            </p>
-          </div>
+          {values.map((item, index) => {
+            const Icon = item.icon;
 
-          <div className="value-box">
-            <FaBolt className="value-icon"/>
-            <h3>Velocidad Optimizada</h3>
-            <p>
-              Páginas rápidas y optimizadas para mejorar la experiencia
-              del usuario y el posicionamiento en buscadores.
-            </p>
-          </div>
+            return (
+              <div className="value-card" key={index}>
 
-          <div className="value-box">
-            <FaShoppingCart className="value-icon"/>
-            <h3>Ventas Online</h3>
-            <p>
-              Desarrollo de tiendas online y sistemas para vender
-              productos o servicios en internet.
-            </p>
-          </div>
+                <Icon className="value-icon" />
 
-          <div className="value-box box-large">
-            <FaChartLine className="value-icon"/>
-            <h3>Crecimiento Digital</h3>
-            <p>
-              Estrategias digitales enfocadas en atraer clientes
-              y mejorar la presencia online de tu negocio.
-            </p>
-          </div>
+                <h3>{item.title}</h3>
 
-          <div className="value-box">
-            <FaChartLine className="value-icon"/>
-            <h3>Escalabilidad</h3>
-            <p>
-              Sistemas preparados para crecer junto con tu negocio
-              y soportar mayor tráfico y usuarios.
-            </p>
-          </div>
+                <p>{item.text}</p>
+
+              </div>
+            );
+          })}
 
         </div>
 

@@ -1,20 +1,35 @@
 /* ========================================
+  GLOBAL FIX (evita overflow horizontal)
+======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
   HERO SECTION
 ======================================== */
 
 .hero {
   position: relative;
   z-index: 1;
-  height: 110vh;
+
+  min-height: 100vh; /* antes 110vh */
+
   display: flex;
   align-items: center;
-  padding: 0 6%;
+
+  padding: 0 clamp(20px, 6%, 80px);
+
   overflow: hidden;
+  overflow-x: hidden;
 
   /* Fondo startup tech */
   background:
-    radial-gradient(circle at 20% 30%, rgb(255, 119, 0), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255, 119, 0, 0.607), transparent 50%),
+    radial-gradient(circle at 20% 30%, var(--bg-7), transparent 40%),
+    radial-gradient(circle at 80% 70%, var(--bg-7), transparent 50%),
     #0a0a0a;
 }
 
@@ -64,7 +79,10 @@
   position: absolute;
   right: 0;
   top: 0;
+
   width: 420px;
+  max-width: 100%;
+
   height: 100%;
 
   background: linear-gradient(
@@ -90,10 +108,16 @@
 
 .hero-container {
   position: relative;
+
   width: 100%;
+  max-width: 1600px;
+
+  margin: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   z-index: 3;
 }
 
@@ -126,6 +150,7 @@
   );
 
   background-size: 200% auto;
+
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -218,11 +243,17 @@
 
 .hero-card {
   padding: 1.8rem;
+
   background: var(--soft);
+
   border: 1px solid var(--glass-border);
+
   border-radius: var(--radius);
+
   backdrop-filter: blur(12px);
+
   color: var(--text-1);
+
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 
   animation: floatCard 6s ease-in-out infinite;
@@ -250,17 +281,11 @@
 
 @keyframes floatCard {
 
-  0% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
 
-  50% {
-    transform: translateY(-12px);
-  }
+  50% { transform: translateY(-12px); }
 
-  100% {
-    transform: translateY(0px);
-  }
+  100% { transform: translateY(0px); }
 
 }
 
@@ -271,8 +296,9 @@
 @media (max-width: 900px) {
 
   .hero {
-    height: auto;
+    min-height: auto;
     padding: 6rem 6%;
+    padding-bottom: 270px;
   }
 
   .hero-container {
@@ -281,7 +307,7 @@
   }
 
   .hero-card {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   .hero-left h1 {
