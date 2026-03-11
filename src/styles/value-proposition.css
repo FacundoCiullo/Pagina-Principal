@@ -153,7 +153,7 @@
   .value-card {
     flex: 1 1 calc(50% - 8px);
     max-width: none;
-    padding: 15px;
+    padding: 15px 6px;
   }
 
   .value-card h3 {

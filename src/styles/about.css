@@ -5,7 +5,7 @@
 .about-section {
   position: relative;
   padding: 90px 5%;
-  margin-top: -180px;
+  margin-top: -160px;
   margin-bottom: -290px;
   z-index: 10;
 }
@@ -95,6 +95,8 @@
 }
 
 /* MOBILE */
+
+
 
 @media (max-width: 768px) {
 
