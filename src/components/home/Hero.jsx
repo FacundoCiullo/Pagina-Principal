@@ -21,7 +21,7 @@ export default function Hero() {
               experiencias
             </span>{" "}
             digitales
-            rápidas, modernas y pensadas para vender
+            rápidas, modernas y pensadas para tu negocio
           </h1>
 
           <p>
@@ -31,9 +31,9 @@ export default function Hero() {
             Ideal para negocios, emprendedores y startups.
           </p>
 
-          <div className="hero-buttons">
-            <a href="#servicios" className="btn-primary">
-              Ver servicios
+          <div className="hero-buttons ">
+            <a href="#servicios" className="btn-primary ">
+              Servicios
             </a>
 
             <a href="#contacto" className="btn-secondary">
@@ -65,18 +65,17 @@ export default function Hero() {
           <h3>Proyecto destacado</h3>
 
           <p className="hero-card-desc">
-            Landing + eCommerce — Performance y crecimiento en ventas.
+            Landing + eCommerce — Performance + Crecimiento en ventas.
           </p>
 
           <div className="tech-stack">
-            <span>React</span>
-            <span>Vite</span>
-            <span>Node</span>
-            <span>Netlify</span>
-            <span>Vercel</span>
+            <span>React -</span>
+            <span> Vite -</span>
+            <span> Node -</span>
+            <span> Netlify -</span>
+            <span> Vercel</span>
           </div>
         </div>
-
       </div>
     </section>
   );

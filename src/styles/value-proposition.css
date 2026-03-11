@@ -3,33 +3,20 @@
 ======================================== */
 
 .value-section {
-    position:relative;
-    padding:250px 5% 60px ;
-    background:var(--bg-4);
-    color:white;
-    overflow:hidden;
+  position: relative;
+  margin-top: 90px;
+  padding: 150px 4% 50px;
+  color: white;
+  overflow: hidden;
 
-  margin:auto;
+  background:
+    linear-gradient(135deg, rgba(255, 115, 0, 0.501), rgba(169, 85, 247, 0.386)),
+    url("../assets/dots-bg5.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* EFECTO PARALLAX */
 }
-
-  .value-section::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:url("../assets/dots-bg4.png");
-background-size:120%;
-    background-position:center;
-    opacity:.05;
-    pointer-events:none;
-  }
-  .value-section::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(135deg,rgba(255,115,0,.15),rgba(168,85,247,.15));
-    mix-blend-mode:color;
-    pointer-events:none;
-  }
 
 /* ========================================
   CONTAINER
@@ -76,57 +63,50 @@ background-size:120%;
 ======================================== */
 
 .value-card {
-position:relative;
-overflow:hidden;
+  position: relative;
+  overflow: hidden;
+
   flex: 1 1 260px;
   max-width: 260px;
 
   padding: 28px;
 
   background: var(--soft);
-
   border: 1px solid var(--glass-border);
-
   border-radius: var(--radius);
 
   backdrop-filter: blur(12px);
 
   color: var(--text-1);
-
   text-align: center;
 
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 
   transition: var(--transition);
-
 }
 
 .value-card::before{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.05),
-transparent
-);
-opacity:0;
-transition:0.4s;
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.05),
+    transparent
+  );
+  opacity:0;
+  transition:0.4s;
 }
 
 .value-card:hover::before{
-opacity:1;
+  opacity:1;
 }
 
 .value-card:hover{
-
-transform: translateY(-6px);
-
-box-shadow: 0 25px 70px rgba(0,0,0,0.6);
-
-border-color: rgba(255,119,0,0.3);
-
+  transform: translateY(-6px);
+  box-shadow: 0 25px 70px rgba(255,119,0,0.3);
+  border-color: rgba(255,119,0,0.3);
 }
 
 /* ========================================
@@ -148,10 +128,12 @@ border-color: rgba(255,119,0,0.3);
 ======================================== */
 
 @media (max-width: 900px) {
+
   .value-card {
     flex: 1 1 45%;
     max-width: none;
   }
+
 }
 
 /* ========================================
@@ -160,40 +142,30 @@ border-color: rgba(255,119,0,0.3);
 
 @media (max-width: 768px) {
 
+  .value-section {
+    padding: 190px 4% 50px;
+  }
+
   .value-row {
-
-    gap: 16px;
-
+    gap: 10px;
   }
 
   .value-card {
-
     flex: 1 1 calc(50% - 8px);
-
     max-width: none;
-
-    padding: 22px;
-
+    padding: 15px;
   }
 
-  /* TEXTO MÁS COMPACTO */
-
   .value-card h3 {
-
     font-size: 0.95rem;
-
   }
 
   .value-card p {
-
     font-size: 0.8rem;
-
   }
 
   .value-icon {
-
     font-size: 1.8rem;
-
   }
 
 }

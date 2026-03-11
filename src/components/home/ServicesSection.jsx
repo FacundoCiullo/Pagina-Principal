@@ -49,7 +49,7 @@ export default function ServicesSection(){
 
       <div className="container">
 
-        <h2 className="section-title">Servicios</h2>
+        <h2 className="section-title">Nuestros Servicios</h2>
 
         <div className="services-grid">
           {services.map((service)=>{

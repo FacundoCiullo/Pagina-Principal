@@ -1,182 +1,145 @@
-/* ========================================
-  GLOBAL FIX (evita overflow horizontal)
-======================================== */
+  /* ========================================
+    HERO SECTION
+  ======================================== */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 110vh;
+    display: flex;
+    align-items: center;
+    padding: 0 clamp(20px, 6%, 80px);
+    overflow: hidden;
+    overflow-x: hidden;
+    
 
-/* ========================================
-  HERO SECTION
-======================================== */
+    background:
+      radial-gradient(circle at 20% 30%, rgba(168,85,247,0.25), transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255,115,0,0.25), transparent 50%),
+      var(--bg-main);
 
-.hero {
-  position: relative;
-  z-index: 1;
-
-  min-height: 100vh; /* antes 110vh */
-
-  display: flex;
-  align-items: center;
-
-  padding: 0 clamp(20px, 6%, 80px);
-
-  overflow: hidden;
-  overflow-x: hidden;
-
-  /* Fondo startup tech */
-  background:
-    radial-gradient(circle at 20% 30%, var(--bg-7), transparent 40%),
-    radial-gradient(circle at 80% 70%, var(--bg-7), transparent 50%),
-    #0a0a0a;
-}
-
-/* ========================================
-  GRID TECNOLÓGICO SUAVE
-======================================== */
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-
-  background-size: 60px 60px;
-  opacity: 0.25;
-
-  z-index: 0;
-}
-
-/* ========================================
-  OVERLAY OSCURO + BLUR
-======================================== */
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    90deg,
-    var(--gradient-3) 0%,
-    rgba(0,0,0,0.65) 40%,
-    var(--gradient-3) 100%
-  );
-
-  backdrop-filter: blur(5px);
-  z-index: 1;
-}
-
-/* ========================================
-  FRANJA NARANJA
-======================================== */
-
-.hero-shape {
-  position: absolute;
-  right: 0;
-  top: 0;
-
-  width: 420px;
-  max-width: 100%;
-
-  height: 100%;
-
-  background: linear-gradient(
-    180deg,
-    var(--gradient-0),
-    var(--gradient-2),
-    var(--gradient-1)
-  );
-
-  clip-path: polygon(
-    35% 0%,
-    100% 0%,
-    100% 100%,
-    60% 100%
-  );
-
-  z-index: 2;
-}
-
-/* ========================================
-  HERO LAYOUT
-======================================== */
-
-.hero-container {
-  position: relative;
-
-  width: 100%;
-  max-width: 1600px;
-
-  margin: auto;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  z-index: 3;
-}
-
-/* ========================================
-  HERO LEFT
-======================================== */
-
-.hero-left {
-  max-width: 600px;
-  color: var(--text-1);
-}
-
-.hero-left h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-/* ========================================
-  HIGHLIGHT TEXT
-======================================== */
-
-.hero-highlight {
-  background: linear-gradient(
-    90deg,
-    var(--gradient-1),
-    var(--gradient-2),
-    var(--gradient-1)
-  );
-
-  background-size: 200% auto;
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: heroShine 4s linear infinite;
-}
-
-@keyframes heroShine {
-  to {
-    background-position: 200% center;
+    background:
+      linear-gradient(135deg, rgba(255,115,0,.15), rgba(168,85,247,.15)),
+      url("../assets/dots-bg5.png");
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
-}
 
-/* ========================================
-  PARAGRAPH
-======================================== */
+    /* GRID */
 
-.hero-left p {
-  color: var(--muted);
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.25;
+    z-index: 0;
+  }
 
-/* ========================================
-  BUTTONS
-======================================== */
+    /* OVERLAY */
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      var(--bg-main) 0%,
+      rgba(0,0,0,0.35) 40%,
+      var(--bg-main) 100%
+    );
+    backdrop-filter: blur(0px);
+    z-index: 1;
+  }
+
+    /* SHAPE */
+
+  .hero-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 420px;
+    max-width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      var(--accent-primary),
+      #ff9a04,
+      var(--accent-primary)
+    );
+
+    clip-path: polygon(
+      35% 0%,
+      100% 0%,
+      100% 100%,
+      60% 100%
+    );
+
+    z-index: 2;
+  }
+
+    /* LAYOUT */
+
+  .hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+  }
+
+    /* HERO LEFT */
+
+  .hero-left {
+    max-width: 600px;
+    color: var(--text-primary);
+  }
+
+  .hero-left h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+    /* HIGHLIGHT */
+
+  .hero-highlight {
+    background: linear-gradient(
+      90deg,
+      var(--accent-primary),
+      var(--accent-secondary),
+      var(--accent-primary)
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heroShine 4s linear infinite;
+  }
+
+  @keyframes heroShine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+    /* PARAGRAPH */
+
+  .hero-left p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+/* BUTTONS */
 
 .hero-buttons {
   display: flex;
@@ -184,142 +147,169 @@
   margin-bottom: 2rem;
 }
 
-.btn-primary {
+/* BOTON PRINCIPAL */
 
+.btn-primary {
+  color: var(--text-primary);
   background: linear-gradient(
     90deg,
-    var(--gradient-1)
+    var(--accent-primary),
+    var(--accent-secondary),
+    var(--accent-primary)
   );
 
-  color: var(--text-1);
+  background-size: 200% auto;
+
   padding: 0.8rem 1.6rem;
   border-radius: var(--radius);
   text-decoration: none;
   font-weight: 600;
-  transition: var(--transition);
+
+  cursor: pointer;
+
+  transition: .3s;
+
+  animation: gradientMove 4s linear infinite;
 }
 
 .btn-primary:hover {
+
   transform: translateY(-2px);
+
+  box-shadow: 0 0 15px rgba(255,115,0,.6);
 }
 
+/* BOTON SECUNDARIO */
+
 .btn-secondary {
-  border: 1px solid var(--glass-border);
-  color: var(--text-1);
+  color: var(--text-primary);
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary),
+    var(--accent-primary)
+  );
+
+  background-size: 200% auto;
+
   padding: 0.8rem 1.6rem;
   border-radius: var(--radius);
   text-decoration: none;
   font-weight: 600;
-  transition: var(--transition);
+
+  cursor: pointer;
+
+  transition: .3s;
+
+  animation: gradientMove 6s linear infinite;
 }
 
 .btn-secondary:hover {
-  border-color: var(--gradient-1);
-}
 
-/* ========================================
-  STATS
-======================================== */
+    transform: translateY(-2px);
 
-.hero-stats {
-  display: flex;
-  gap: 2.5rem;
-}
-
-.stat span {
-  color: var(--text-3);
-  font-weight: 700;
-  font-size: 1.4rem;
-}
-
-.stat p {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-/* ========================================
-  FLOATING CARD
-======================================== */
-
-.hero-card {
-  padding: 1.8rem;
-
-  background: var(--soft);
-
-  border: 1px solid var(--glass-border);
-
-  border-radius: var(--radius);
-
-  backdrop-filter: blur(12px);
-
-  color: var(--text-1);
-
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-
-  animation: floatCard 6s ease-in-out infinite;
-}
-
-.hero-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
-}
-
-.hero-card-desc {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
-.hero-tech {
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-/* ========================================
-  FLOAT ANIMATION
-======================================== */
-
-@keyframes floatCard {
-
-  0% { transform: translateY(0px); }
-
-  50% { transform: translateY(-12px); }
-
-  100% { transform: translateY(0px); }
+  box-shadow: 0 0 12px rgba(255,115,0,.5);
 
 }
 
-/* ========================================
-  MOBILE
-======================================== */
+/* ANIMACION GRADIENTE */
 
-@media (max-width: 900px) {
+@keyframes gradientMove {
 
-  .hero {
-    min-height: auto;
-    padding: 6rem 6%;
-    padding-bottom: 270px;
+  0% {
+    background-position: 0% center;
   }
 
-  .hero-container {
-    flex-direction: column;
-    align-items: flex-start;
+  100% {
+    background-position: 200% center;
   }
 
-  .hero-card {
-    margin-top: 1rem;
-  }
+}
 
-  .hero-left h1 {
-    font-size: 2.2rem;
-  }
+    /* STATS */
 
   .hero-stats {
-    gap: 1.5rem;
+    display: flex;
+    gap: 2.5rem;
   }
 
-  .hero-shape {
-    display: none;
+  .stat span {
+    color: var(--accent-primary);
+    font-weight: 700;
+    font-size: 1.4rem;
   }
 
-}
+  .stat p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+    /* FLOATING CARD */
+
+  .hero-card {
+    padding: 1.8rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    backdrop-filter: blur(12px);
+    color: var(--text-primary);
+    background: var(--glass-bg);
+    box-shadow: var(--shadow-hero);
+    animation: floatCard 6s ease-in-out infinite;
+  }
+
+  .hero-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-card-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .hero-tech {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+    /* FLOAT */
+
+  @keyframes floatCard {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+  }
+
+    /* MOBILE */
+
+  @media (max-width: 900px) {
+
+    .hero {
+      min-height: auto;
+      padding: 6rem 6%;
+      padding-bottom: 270px;
+    }
+
+    .hero-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-card {
+      margin-top: 1rem;
+    }
+
+    .hero-left h1 {
+      font-size: 2.2rem;
+    }
+
+    .hero-stats {
+      gap: 1.5rem;
+    }
+
+    .hero-shape {
+      display: none;
+    }
+    
+  }

@@ -1,59 +1,69 @@
-  .about-section {
-    position: relative;
-    padding: 90px 5%;
-    margin-top: -180px; /* lo sube hacia el hero */
-    margin-bottom: -290px; /* lo sube hacia el hero */
-    z-index: 10;
-  }
+/* ========================================
+  ABOUT SECTION
+======================================== */
 
-  /* CONTENEDOR NEGRO */
+.about-section {
+  position: relative;
+  padding: 90px 5%;
+  margin-top: -180px;
+  margin-bottom: -290px;
+  z-index: 10;
+}
 
-  .about-bar {
-    background: var(--bg-4);
-    border-radius: 16px;
-    padding: 40px;
-    max-width: 1000px;      /* ancho más chico */
-    margin: 0 auto;        /* centrado */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-  }
+/* CONTENEDOR */
 
-  /* TEXTO */
+.about-bar {
+  box-shadow: 0 25px 70px rgba(255,119,0,0.3);
+  backdrop-filter:blur(12px);
+  background: linear-gradient(
+    90deg,
+    var(--bg-section),
+    rgba(168,85,247,0.25)
+  );
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
 
-  .about-intro {
-    max-width: 200px;
-    color: var(--text-1);
-  }
+/* TEXTO */
 
-  .about-intro h3 {
-    font-size: 1.3rem;
-    margin-bottom: 6px;
-  }
+.about-intro {
+  max-width: 200px;
+  color: var(--text-primary);
+}
 
-  .about-intro p {
-    opacity: 0.7;
-    font-size: 0.9rem;
-  }
+.about-intro h3 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
 
-  /* CARDS */
+.about-intro p {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
 
-  .about-cards {
-    min-height:90px;
-    display: flex;
-    gap: 10px;
-  }
+/* CARDS */
+
+.about-cards {
+  min-height:90px;
+  display: flex;
+  gap: 10px;
+}
 
 /* TARJETAS */
 
 .about-card {
   cursor:pointer;
-  color: var(--text-1);
+  color: var(--text-primary);
+  
   padding: 20px;
   width: 180px;
   border-radius:20px;
-  background:var(--soft);
   border:1px solid var(--glass-border);
   backdrop-filter:blur(12px);
   display:flex;
@@ -62,13 +72,14 @@
   text-align:center;
   transition:var(--transition);
   height:100%;
-  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  background: var(--glass-bg);
+  box-shadow: var(--shadow-hero);
 }
 
 .about-card:hover {
-    transform:translateY(-8px);
-    border-color:rgba(255,119,0,0.35);
-    box-shadow:0 25px 70px rgba(0,0,0,0.6);
+  transform:translateY(-5px);
+  border-color:rgba(255,115,0,0.35);
+  box-shadow:0 0 50px rgba(168,85,247,.2);
 }
 
 .about-card h4 {
@@ -79,42 +90,42 @@
 .about-card p {
   font-size: 0.8rem;
   line-height: 1.4;
+  color: var(--text-secondary);
 }
-
 
 /* MOBILE */
 
 @media (max-width: 768px) {
-    .about-section {
-    margin-top: -290px; /* lo sube hacia el hero */
-    margin-bottom: -290px; /* lo sube hacia el hero */
-  }
 
+  .about-section {
+    margin-top: -290px;
+    margin-bottom: -330px;
+  }
 
   .about-bar {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 18px;
+
     max-width: 100%;
+
     padding: 30px;
   }
-
-  /* TEXTO */
 
   .about-intro {
     grid-column: 1;
     max-width: none;
   }
 
-  /* EL CONTENEDOR DESAPARECE DEL LAYOUT */
-
   .about-cards {
     display: contents;
   }
 
-  /* CARDS */
-
   .about-card {
     width: 100%;
   }
+
 }

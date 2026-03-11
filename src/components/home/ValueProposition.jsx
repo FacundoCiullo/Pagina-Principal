@@ -16,7 +16,7 @@ export default function ValueProposition() {
     },
     {
       icon: FaShoppingCart,
-      title: "Ventas Online",
+      title: "Plataformas de Venta",
       text: "Desarrollo de tiendas online y sistemas para vender productos o servicios en internet."
     },
     {

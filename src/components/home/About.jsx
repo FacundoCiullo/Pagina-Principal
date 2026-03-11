@@ -7,8 +7,8 @@ export default function About() {
       <div className="about-bar">
 
         <div className="about-intro">
-          <h3>Why choose CodeFoxLab</h3>
-          <p>Desarrollo moderno, rápido y escalable.</p>
+          <h3>En CodeFox Lab enfocamos en el</h3>
+          <p>Desarrollo moderno, rápido y escalable para tu negocio.</p>
         </div>
 
         <div className="about-cards">

@@ -1,4 +1,8 @@
-  .services-section{
+/* ========================================
+  Services SECTION
+======================================== */
+
+.services-section{
     position:relative;
     padding:60px 5%;
     background:var(--bg-4);
@@ -51,6 +55,7 @@
     backdrop-filter:blur(12px);
     display:flex;
     flex-direction:column;
+    justify-content: space-between;
     align-items:center;
     text-align:center;
     cursor:pointer;
@@ -70,7 +75,7 @@
   .service-card:hover{
     transform:translateY(-8px);
     border-color:rgba(255,119,0,0.35);
-    box-shadow:0 25px 70px rgba(0,0,0,0.6);
+    box-shadow: 0 0 50px rgba(168,85,247,.2);
   }
   
   .service-icon{
@@ -85,7 +90,7 @@
     min-height:48px;
   }
   .price{
-    color:var(--text-3);
+    color:var(--text-primary);
     margin-bottom:20px;
     font-weight:600;
   }
