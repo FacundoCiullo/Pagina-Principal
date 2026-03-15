@@ -1,14 +1,38 @@
+import { useEffect, useRef } from "react";
 import "../../styles/hero.css";
 
-
 export default function Hero() {
-  return (
-    <section
-      className="hero"
-      
-    >
-      <div className="hero-overlay"></div>
 
+  const videoRef = useRef(null);
+
+useEffect(() => {
+
+  const handleScroll = () => {
+
+    const video = videoRef.current;
+    if (!video || !video.duration) return;
+
+    const rect = video.parentElement.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const progress = Math.min(
+      Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0),
+      1
+    );
+
+    video.currentTime = video.duration * progress;
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  return () => window.removeEventListener("scroll", handleScroll);
+
+}, []);
+
+  return (
+    <section className="hero">
+
+      <div className="hero-overlay"></div>
       <div className="hero-shape"></div>
 
       <div className="hero-container">
@@ -26,13 +50,14 @@ export default function Hero() {
 
           <p>
             Diseño profesional, optimización para celulares
-            y velocidad pensada para convertir visitas en ventas. Desarrollo soluciones que impulsan tu marca y
+            y velocidad pensada para convertir visitas en ventas.
+            Desarrollo soluciones que impulsan tu marca y
             atraen más clientes.
             Ideal para negocios, emprendedores y startups.
           </p>
 
-          <div className="hero-buttons ">
-            <a href="#servicios" className="btn-primary ">
+          <div className="hero-buttons">
+            <a href="#servicios" className="btn-primary">
               Servicios
             </a>
 
@@ -56,12 +81,14 @@ export default function Hero() {
               <span>+3</span>
               <p>Años de Experiencia</p>
             </div>
-
           </div>
 
         </div>
+                  {/* VIDEO */}
+
 
         <div className="hero-card">
+
           <h3>Proyecto destacado</h3>
 
           <p className="hero-card-desc">
@@ -75,7 +102,9 @@ export default function Hero() {
             <span> Netlify -</span>
             <span> Vercel</span>
           </div>
+
         </div>
+
       </div>
     </section>
   );

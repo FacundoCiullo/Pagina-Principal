@@ -1,5 +1,5 @@
 import "../../styles/techstack.css";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs , FaFireAlt  } from "react-icons/fa";
 
 export default function TechStack() {
   return (
@@ -43,8 +43,8 @@ export default function TechStack() {
           </div>
 
           <div className="tech-card">
-            <FaCss3Alt className="tech-icon"/>
-            <h3>CSS3</h3>
+            <FaFireAlt className="tech-icon"/>
+            <h3>Firebase</h3>
           </div>
 
         </div>

@@ -254,7 +254,7 @@ transform: translateY(-2px) scale(1.02);
     color: var(--text-primary);
     background: var(--glass-bg);
     box-shadow: var(--shadow-hero);
-    animation: floatCard 6s ease-in-out infinite;
+    animation: floatCard 2s ease-in-out infinite;
   }
 
   .hero-card h3 {
@@ -287,8 +287,8 @@ transform: translateY(-2px) scale(1.02);
 
     .hero {
       min-height: auto;
-      padding: 6rem 6%;
-      padding-bottom: 270px;
+      padding: 8rem 6%;
+      padding-bottom: 270px;;
     }
 
     .hero-container {

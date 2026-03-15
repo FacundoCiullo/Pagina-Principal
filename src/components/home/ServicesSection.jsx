@@ -61,8 +61,6 @@ export default function ServicesSection(){
 
               <h3>{service.title}</h3>
 
-
-
               <p className="price">{service.price}</p>
 
               <p className="service-description">

@@ -13,7 +13,7 @@
 /* CONTENEDOR */
 
 .about-bar {
-  box-shadow: 0 25px 70px rgba(255,119,0,0.3);
+  box-shadow: 0 1px 70px rgba(0, 0, 0, 0.3);
   backdrop-filter:blur(12px);
   background: linear-gradient(
     90deg,

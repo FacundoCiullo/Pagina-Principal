@@ -1,4 +1,5 @@
 import "../../styles/whyus.css";
+import { FaBolt, FaPalette, FaTools, FaChartLine } from "react-icons/fa";
 
 export default function WhyUs() {
   return (
@@ -17,22 +18,26 @@ export default function WhyUs() {
         <div className="why-grid">
 
           <div className="why-card">
-            <h3>⚡ Alto rendimiento</h3>
+            <FaBolt className="why-icon" />
+            <h3>Alto rendimiento</h3>
             <p>Sitios optimizados para velocidad y experiencia de usuario.</p>
           </div>
 
           <div className="why-card">
-            <h3>🎨 Diseño moderno</h3>
+            <FaPalette className="why-icon" />
+            <h3>Diseño moderno</h3>
             <p>Interfaces limpias, profesionales y pensadas para convertir.</p>
           </div>
 
           <div className="why-card">
-            <h3>🔧 Soporte continuo</h3>
+            <FaTools className="why-icon" />
+            <h3>Soporte continuo</h3>
             <p>Mantenimiento y mejoras para que tu web siga creciendo.</p>
           </div>
 
           <div className="why-card">
-            <h3>📈 Escalabilidad</h3>
+            <FaChartLine className="why-icon" />
+            <h3>Escalabilidad</h3>
             <p>Desarrollos preparados para crecer junto con tu negocio.</p>
           </div>
 

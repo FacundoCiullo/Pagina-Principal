@@ -1,0 +1,32 @@
+.promo-bar{
+  position:fixed;
+      z-index:1000;
+  width:100%;
+  height:40px;
+  background:#000;
+  color:white;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  font-size:14px;
+}
+
+
+.promo-track{
+  display:flex;
+  white-space:nowrap;
+  animation:scrollText 15s linear infinite;
+}
+
+.promo-track span{
+  padding-right:80px;
+}
+
+@keyframes scrollText{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-8%);
+  }
+}

@@ -5,17 +5,23 @@
     .navbar{
     position:fixed;
     width:100%;
-    top:0;
+    top: 40px;
     left:0;
-    padding:1rem 6%;
-    z-index:1000;
+    padding:0.5rem 6%;
+    z-index:999;
     background: rgba(0, 0, 0, 0.85);
+    backdrop-filter:blur(5px);
+    transition:transform .3s ease, background .3s ease;
+    }
+
+    .navbar.hidden{
+    transform:translateY(-150%);
     }
 
     .navbar.scrolled{
-    backdrop-filter:blur(10px);
-    background:rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
     }
+
 
     /* ========================================
     CONTAINER
@@ -111,14 +117,15 @@
 
     .mobile-menu{
     position:fixed;
-    top:80px;
+    top:104px;
     left:0;
     width:100%;
     display:flex;
     flex-direction:column;
     align-items:center;
+    border-radius: 0px 0px 25px 25px;
     background:rgba(0,0,0,0.85);
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(5px);
     padding:8px 20px 1rem;
     opacity:0;
     pointer-events:none;
@@ -184,5 +191,27 @@
     .menu-toggle{
     display:block;
     }
+    .logo{
+    font-size:1rem;
+    font-weight:900;
+    text-decoration:none;
+    letter-spacing:1px;
+    display:flex;
+    align-items:center;
+    gap:2px;
 
+    }
+    .logo img{
+    height:20px;
+    width:auto;
+    display:block;
+    }
+
+    .logo-code{
+    color:var(--text-1);
+    }
+
+    .logo-fox{
+    color:var(--text-3);
+    }
     }
