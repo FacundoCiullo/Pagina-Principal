@@ -86,7 +86,7 @@ export default function Navbar() {
           <a href="/" className="logo">
             <img src={logo} alt="Logo" />
             <span className="logo-code">Code</span>
-            <span className="logo-fox">Fox</span>
+            <span className="logo-fox">Fox </span>
             <span className="logo-code">Lab</span>
           </a>
 
