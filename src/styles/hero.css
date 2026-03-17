@@ -327,6 +327,41 @@
   }
 
 
+    /* =========================
+    REVEAL HERO (NO ROMPE NADA)
+  ========================= */
+
+  .hero .reveal-item {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  /* activa animación */
+
+  .hero.visible .reveal-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* animación suave base */
+
+  .hero.visible .reveal-item {
+    transition: 
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+
+  /* escalonado */
+
+  .hero.visible .reveal-item:nth-child(1){
+    transition-delay: 0.2s;
+  }
+
+  .hero.visible .reveal-item:nth-child(2){
+    transition-delay: 0.4s;
+  }
+
+  
   /* ===============================
     MOBILE
   =============================== */

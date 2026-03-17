@@ -3,11 +3,11 @@
     ======================================== */
 
     .navbar{
-            border: 1px solid var(--glass-border);
+    border: 1px solid var(--glass-border);
     position:fixed;
-    width:calc(100% - 30px); /* resta 15px de cada lado */
+    width:calc(100% - 20px); /* resta 15px de cada lado */
     top:50px;
-    left: 15px; /* la centra */
+    left: 10px; /* la centra */
     border-radius:50px;
     padding:0.4rem 6%;
     z-index:999;
@@ -115,6 +115,7 @@
     cursor:pointer;
     color:var(--text-1);
     z-index:1100;
+    margin-bottom: 0.2rem;
     }
 
     /* ========================================
@@ -216,9 +217,12 @@
     .mobile-menu.open a:nth-child(6){transition-delay:.30s;}
 
     .mobile-menu a:hover{
-    color:var(--text-3);
-    background:rgba(255,255,255,0.05);
-    border-radius: 15px;
+    color:var(--text-4);
+    background:rgba(255, 255, 255, 0.563);
+    border-radius: 50px;
+    transform:translateY(-3px);
+    border-color:rgba(168,85,247,.2);
+    box-shadow:0 0 10px rgba(168,85,247,.2);
     }
 
     /* ========================================

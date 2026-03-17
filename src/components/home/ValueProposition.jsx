@@ -1,7 +1,27 @@
+import { useEffect, useRef, useState } from "react";
 import "../../styles/value-proposition.css";
 import { FaMobileAlt, FaBolt, FaShoppingCart, FaChartLine } from "react-icons/fa";
 
 export default function ValueProposition() {
+
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // 🔥 entra Y sale
+        setVisible(entry.isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+
+  }, []);
 
   const values = [
     {
@@ -27,11 +47,14 @@ export default function ValueProposition() {
   ];
 
   return (
-    <section className="value-section">
+    <section
+      ref={sectionRef}
+      className={`value-section ${visible ? "visible" : ""}`}
+    >
 
       <div className="value-container">
 
-        <div className="value-header">
+        <div className="value-header reveal-item">
           <h2>¿Qué podemos hacer por tu negocio?</h2>
           <p>
             Creamos soluciones digitales pensadas para mejorar tu presencia online,
@@ -45,14 +68,13 @@ export default function ValueProposition() {
             const Icon = item.icon;
 
             return (
-              <div className="value-card" key={index}>
-
+              <div
+                className="value-card reveal-item"
+                key={index}
+              >
                 <Icon className="value-icon" />
-
                 <h3>{item.title}</h3>
-
                 <p>{item.text}</p>
-
               </div>
             );
           })}

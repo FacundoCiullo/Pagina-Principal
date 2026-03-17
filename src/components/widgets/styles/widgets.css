@@ -3,10 +3,10 @@
 .whatsapp-widget{
   position:fixed;
   right:20px;
-  bottom:90px;
+  bottom:100px;
 
-  width: 45px;
-  height:45px;
+  width: 55px;
+  height:55px;
 
   border-radius:50%;
   background:#25D366;

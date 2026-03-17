@@ -1,43 +1,39 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../../styles/hero.css";
 
 export default function Hero() {
 
-  const videoRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef(null);
 
-useEffect(() => {
+  useEffect(() => {
 
-  const handleScroll = () => {
-
-    const video = videoRef.current;
-    if (!video || !video.duration) return;
-
-    const rect = video.parentElement.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    const progress = Math.min(
-      Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0),
-      1
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // 🔥 ahora entra Y sale
+        setVisible(entry.isIntersecting);
+      },
+      { threshold: 0.2 }
     );
 
-    video.currentTime = video.duration * progress;
-  };
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => observer.disconnect();
 
-  return () => window.removeEventListener("scroll", handleScroll);
-
-}, []);
+  }, []);
 
   return (
-    <section className="hero">
+    <section
+      ref={sectionRef}
+      className={`hero ${visible ? "visible" : ""}`}
+    >
 
       <div className="hero-overlay"></div>
       <div className="hero-shape"></div>
 
       <div className="hero-container">
 
-        <div className="hero-left">
+        <div className="hero-left reveal-item">
 
           <h1>
             Desarrollamos{" "}
@@ -84,10 +80,8 @@ useEffect(() => {
           </div>
 
         </div>
-                  {/* VIDEO */}
 
-
-        <div className="hero-card">
+        <div className="hero-card reveal-item">
 
           <h3>Proyecto destacado</h3>
 
