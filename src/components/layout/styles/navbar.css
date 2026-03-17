@@ -3,6 +3,7 @@
     ======================================== */
 
     .navbar{
+            border: 1px solid var(--glass-border);
     position:fixed;
     width:calc(100% - 30px); /* resta 15px de cada lado */
     top:50px;
@@ -16,7 +17,7 @@
     }
 
     .navbar.hidden{
-    transform:translateY(-150%);
+    transform:translateY(-200%);
     }
 
     .navbar.scrolled{
@@ -72,13 +73,17 @@
     display:flex;
     gap:2rem;
     list-style:none;
+    margin-bottom: 0;
     }
+
+
 
     .nav-links a{
     text-decoration:none;
     color:var(--text-1);
     transition:var(--transition);
     position:relative;
+    padding-bottom:4px;
     }
 
     .nav-links a:hover{
@@ -88,9 +93,12 @@
     .nav-links a::after{
     content:"";
     position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0;
     height:2px;
-    background:var(--bg-3);
-    transition:var(--transition);
+    background:var(--text-3);
+    transition:width .3s ease;
     }
 
     .nav-links a:hover::after{
@@ -116,18 +124,24 @@
     .mobile-menu{
     position:fixed;
     top:104px;
-    left:0;
-    width: 100%;
+    left:15px;
+    width:100%;
     display:flex;
     flex-direction:row;
     align-items:center;
+    gap:6px;
+    padding:8px 2rem 1rem;
 
-    padding:8px 20px 1rem;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+
     opacity:0;
     pointer-events:none;
     max-height:0;
-    overflow:hidden;
-    transition:max-height .35s ease,opacity .25s ease;
+    transition:transform .3s ease, background .3s ease;
     z-index:990;
     }
 
@@ -140,10 +154,19 @@
     }
 
 
-    .menu-toggle.hidden{
-    transform:translateY(-150%);
+    /* CUANDO SE ABRE */
+
+    .mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
     }
 
+    /* CUANDO SCROLLEAS HACIA ABAJO */
+
+    .mobile-menu.hidden {
+    transform: translateY(-200%);
+    }
 
 
     /* ========================================
@@ -151,19 +174,31 @@
     ======================================== */
 
     .mobile-menu a{
+    flex:0 0 auto;
+    white-space:nowrap;
     margin-top: 4px;
-    width:100%;
-    padding: .4rem;
+    width:fit-content;
+    padding: .5rem 4%;
     border-radius: 50px;
+    border: 1px solid var(--glass-border);
     background:rgba(0,0,0,0.85);
     backdrop-filter:blur(5px);
     text-align:center;
-    font-size: .8rem;
+    font-size: 1rem;
     color:var(--text-1);
     text-decoration:none;
     opacity:0;
     transform:translateY(-8px);
+    scroll-snap-align:start;
     transition:var(--transition);
+    }
+
+    .mobile-menu::-webkit-scrollbar{
+    display:none;
+    }
+
+    .mobile-menu{
+    scrollbar-width:none;
     }
 
     /* ANIMACION ESCALONADA */
@@ -178,6 +213,7 @@
     .mobile-menu.open a:nth-child(3){transition-delay:.15s;}
     .mobile-menu.open a:nth-child(4){transition-delay:.20s;}
     .mobile-menu.open a:nth-child(5){transition-delay:.25s;}
+    .mobile-menu.open a:nth-child(6){transition-delay:.30s;}
 
     .mobile-menu a:hover{
     color:var(--text-3);

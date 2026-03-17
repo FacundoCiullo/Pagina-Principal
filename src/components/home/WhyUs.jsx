@@ -15,7 +15,7 @@ export default function WhyUs() {
           </p>
         </div>
 
-        <div className="why-grid">
+        <div className="why-grid" >
 
           <div className="why-card">
             <FaBolt className="why-icon" />

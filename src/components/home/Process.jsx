@@ -3,7 +3,7 @@ import { FaSearch, FaDraftingCompass, FaCode, FaRocket } from "react-icons/fa";
 
 export default function Process() {
   return (
-    <section className="process-section">
+    <section className="process-section" id="process">
 
       <div className="process-container">
 

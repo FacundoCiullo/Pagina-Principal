@@ -2,7 +2,7 @@ import "../../styles/cta.css";
 
 export default function CTA() {
   return (
-    <section className="cta-section">
+    <section className="cta-section" id="cta">
 
       <div className="cta-container">
 

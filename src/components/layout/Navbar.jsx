@@ -1,4 +1,4 @@
-import { BiMenuAltRight, BiX } from "react-icons/bi";
+import { BiSolidCaretUpCircle , BiSolidCaretDownCircle  } from "react-icons/bi";
 import { useState, useEffect, useRef } from "react";
 import "./styles/navbar.css";
 import logo from "../../assets/logo.png";
@@ -23,9 +23,9 @@ export default function Navbar() {
       setScrolled(currentScroll > 20);
 
       if (currentScroll > lastScroll.current && currentScroll > 80) {
-        setHidden(true); // bajar scroll → ocultar
+        setHidden(true);
       } else {
-        setHidden(false); // subir scroll → mostrar
+        setHidden(false);
       }
 
       lastScroll.current = currentScroll;
@@ -86,22 +86,24 @@ export default function Navbar() {
           <a href="/" className="logo">
             <img src={logo} alt="Logo" />
             <span className="logo-code">Code</span>
-            <span className="logo-fox">Fox </span>
+            <span className="logo-fox">Fox</span>
             <span className="logo-code">Lab</span>
           </a>
 
           <ul className="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#about">Quienes somos</a></li>
+            <li><a href="#process">Como trabajamos</a></li>
             <li><a href="#portfolio">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#cta">Contacto</a></li>
           </ul>
 
           <div
             className="menu-toggle"
             onClick={() => setOpen(!open)}
           >
-            {open ? <BiX /> : <BiMenuAltRight />}
+            {open ? < BiSolidCaretUpCircle /> : < BiSolidCaretDownCircle />}
           </div>
 
         </div>
@@ -109,12 +111,14 @@ export default function Navbar() {
 
       <div
         ref={menuRef}
-        className={`mobile-menu ${open ? "open" : ""}`}
+        className={`mobile-menu ${open ? "open" : ""} ${hidden ? "hidden" : ""}`}
       >
         <a href="#inicio" onClick={() => setOpen(false)}>Inicio</a>
         <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
+        <a href="#about" onClick={() => setOpen(false)}>Quienes somos</a>
+        <a href="#process" onClick={() => setOpen(false)}>Como trabajamos</a>
         <a href="#portfolio" onClick={() => setOpen(false)}>Proyectos</a>
-        <a href="#contacto" onClick={() => setOpen(false)}>Contacto</a>
+        <a href="#cta" onClick={() => setOpen(false)}>Contacto</a>
       </div>
     </>
   );
