@@ -8,15 +8,20 @@
   padding: 150px 4% 50px;
   color: white;
   overflow: hidden;
+    min-height: 80vh;
 
-  background:
-    linear-gradient(135deg, rgba(255, 115, 0, 0.501), rgba(169, 85, 247, 0.386)),
-    url("../assets/dots-bg5.png");
+    background:
+      linear-gradient(165deg, rgba(255,115,0,.15), rgba(168,85,247,.15)),
+      url("../assets/dots-bg5.png");
 
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* EFECTO PARALLAX */
-}
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* PARALLAX SOLO PARA DESKTOP */
+    background-attachment: fixed;
+  }
+
 
 /* ========================================
   CONTAINER
@@ -187,6 +192,11 @@
 
   .value-section {
     padding: 190px 4% 50px;
+    
+    /* FIX ZOOM BACKGROUND MOBILE */
+
+    background-attachment: scroll;
+
   }
 
   .value-row {

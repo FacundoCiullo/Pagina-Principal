@@ -7,19 +7,40 @@ export default function ValueProposition() {
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
+  const bgBackRef = useRef(null);
+  const bgMidRef = useRef(null);
 
+  /* reveal */
+  useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        // 🔥 entra Y sale
-        setVisible(entry.isIntersecting);
-      },
+      ([entry]) => setVisible(entry.isIntersecting),
       { threshold: 0.2 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
-
     return () => observer.disconnect();
+  }, []);
+
+  /* 🔥 PARALLAX MULTICAPA */
+  useEffect(() => {
+
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+
+      const rect = sectionRef.current.getBoundingClientRect();
+      const offset = rect.top;
+
+      if (bgBackRef.current) {
+        bgBackRef.current.style.transform = `translateY(${offset * 0.15}px)`;
+      }
+
+      if (bgMidRef.current) {
+        bgMidRef.current.style.transform = `translateY(${offset * 0.3}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
 
   }, []);
 
@@ -52,6 +73,12 @@ export default function ValueProposition() {
       className={`value-section ${visible ? "visible" : ""}`}
     >
 
+      {/* 🔥 CAPA FONDO (más lenta) */}
+      <div className="parallax-bg-back" ref={bgBackRef}></div>
+
+      {/* 🔥 CAPA MEDIA */}
+      <div className="parallax-bg-mid" ref={bgMidRef}></div>
+
       <div className="value-container">
 
         <div className="value-header reveal-item">
@@ -63,22 +90,17 @@ export default function ValueProposition() {
         </div>
 
         <div className="value-row">
-
           {values.map((item, index) => {
             const Icon = item.icon;
 
             return (
-              <div
-                className="value-card reveal-item"
-                key={index}
-              >
+              <div className="value-card reveal-item" key={index}>
                 <Icon className="value-icon" />
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
             );
           })}
-
         </div>
 
       </div>
