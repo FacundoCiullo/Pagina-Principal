@@ -1,4 +1,4 @@
-import { BiSolidCaretUpCircle , BiSolidCaretDownCircle  } from "react-icons/bi";
+import { BiSolidCaretRightCircle , BiSolidCaretLeftCircle  } from "react-icons/bi";
 import { useState, useEffect, useRef } from "react";
 import "./styles/navbar.css";
 import logo from "../../assets/logo.png";
@@ -22,10 +22,15 @@ export default function Navbar() {
 
       setScrolled(currentScroll > 20);
 
-      if (currentScroll > lastScroll.current && currentScroll > 80) {
-        setHidden(true);
-      } else {
-        setHidden(false);
+if (!open) {
+  if (currentScroll > lastScroll.current && currentScroll > 80) {
+    setHidden(true);
+  } else {
+    setHidden(false);
+  }
+} else {
+  setHidden(false); // 👈 fuerza visible si el menú está abierto
+
       }
 
       lastScroll.current = currentScroll;
@@ -36,7 +41,7 @@ export default function Navbar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
 
-  }, []);
+  }, );
 
   /* CERRAR AL HACER CLICK FUERA */
 
@@ -103,15 +108,22 @@ export default function Navbar() {
             className="menu-toggle"
             onClick={() => setOpen(!open)}
           >
-            {open ? < BiSolidCaretUpCircle /> : < BiSolidCaretDownCircle />}
+            {open ? <BiSolidCaretLeftCircle   /> : < BiSolidCaretRightCircle  />}
           </div>
 
         </div>
       </header>
 
+      {/* OVERLAY */}
+      <div
+        className={`menu-overlay ${open ? "open" : ""}`}
+        onClick={() => setOpen(false)}
+      />
+
+      {/* MENU LATERAL */}
       <div
         ref={menuRef}
-        className={`mobile-menu ${open ? "open" : ""} ${hidden ? "hidden" : ""}`}
+        className={`mobile-menu ${open ? "open" : ""}`}
       >
         <a href="#inicio" onClick={() => setOpen(false)}>Inicio</a>
         <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
@@ -122,5 +134,4 @@ export default function Navbar() {
       </div>
     </>
   );
-
 }
