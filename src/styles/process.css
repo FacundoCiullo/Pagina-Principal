@@ -8,10 +8,12 @@
   overflow: hidden;
   color: white;
   background:
+    linear-gradient(135deg, rgb(0, 0, 0), rgba(168,85,247,.15)),
     url("../assets/dots-bg5.png");
-
   background-size: cover;
   background-position: center;
+  
+  /* PARALLAX SOLO PARA DESKTOP */
   background-attachment: fixed;
 }
 
@@ -34,7 +36,7 @@
 }
 
 .process-header h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 18px;
 }
 
@@ -61,25 +63,18 @@
 .process-card {
   position: relative;
   overflow: hidden;
-
-  padding: 15px 0px 0px 0px;
-
+  padding: 20px;
   background: var(--soft);
-  border: 1px solid var(--Accent-1);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius);
-
   backdrop-filter: blur(12px);
-
   text-align: center;
-
   color: var(--text-1);
-
-  box-shadow: 0 20px 60px cargba(0,0,0,0.5);
-
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
   transition: var(--transition);
 }
 
-/* glow hover overlay */
+/* glow hover */
 
 .process-card::before{
   content:"";
@@ -101,13 +96,10 @@
   opacity:1;
 }
 
-/* hover effect */
-
 .process-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 25px 70px rgba(255,119,0,0.3);
   border-color: rgba(255,119,0,0.3);
-  
 }
 
 /* ========================================
@@ -115,18 +107,11 @@
 ======================================== */
 
 .process-icon {
-
   font-size: 2.3rem;
-
   margin-bottom: 18px;
-
   color: var(--color-primary);
-
   transition: var(--transition);
-
 }
-
-/* icon animation */
 
 .process-card:hover .process-icon{
   transform: scale(1.1);
@@ -144,6 +129,29 @@
   font-size: 0.95rem;
   opacity: 0.85;
 }
+
+/* PROCESS REVEAL */
+
+.process-section .reveal-item {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+
+.process-section.visible .reveal-item {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+/* efecto escalonado */
+
+.process-section.visible .process-card:nth-child(1){ transition-delay: 0.1s; }
+.process-section.visible .process-card:nth-child(2){ transition-delay: 0.2s; }
+.process-section.visible .process-card:nth-child(3){ transition-delay: 0.3s; }
+.process-section.visible .process-card:nth-child(4){ transition-delay: 0.4s; }
+
 
 /* ========================================
   TABLET
@@ -165,15 +173,17 @@
 
   .process-section{
     padding: 80px 5% 5%;
+            /* FIX ZOOM BACKGROUND MOBILE */
+    background-size: contain;
   }
 
   .process-grid{
     grid-template-columns: repeat(2,1fr);
     gap: 15px;
   }
+
   .process-card p{
     font-size: 0.8rem;
-    padding: 4%;
   }
 
 }

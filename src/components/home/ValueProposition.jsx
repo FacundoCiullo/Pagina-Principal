@@ -1,33 +1,22 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import useReveal from "../../hooks/useReveal";
 import "../../styles/value-proposition.css";
 import { FaMobileAlt, FaBolt, FaShoppingCart, FaChartLine } from "react-icons/fa";
 
 export default function ValueProposition() {
 
-  const [visible, setVisible] = useState(false);
-  const sectionRef = useRef(null);
+  const { ref, visible } = useReveal(0.2);
 
   const bgBackRef = useRef(null);
   const bgMidRef = useRef(null);
-
-  /* reveal */
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
 
   /* 🔥 PARALLAX MULTICAPA */
   useEffect(() => {
 
     const handleScroll = () => {
-      if (!sectionRef.current) return;
+      if (!ref.current) return;
 
-      const rect = sectionRef.current.getBoundingClientRect();
+      const rect = ref.current.getBoundingClientRect();
       const offset = rect.top;
 
       if (bgBackRef.current) {
@@ -42,7 +31,7 @@ export default function ValueProposition() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
 
-  }, []);
+  }, [ref]);
 
   const values = [
     {
@@ -69,20 +58,22 @@ export default function ValueProposition() {
 
   return (
     <section
-      ref={sectionRef}
+      ref={ref}
       className={`value-section ${visible ? "visible" : ""}`}
     >
 
-      {/* 🔥 CAPA FONDO (más lenta) */}
+      {/* 🔥 CAPA FONDO */}
       <div className="parallax-bg-back" ref={bgBackRef}></div>
 
       {/* 🔥 CAPA MEDIA */}
       <div className="parallax-bg-mid" ref={bgMidRef}></div>
 
-      <div className="value-container">
+      <div className="value-container" >
 
         <div className="value-header reveal-item">
-          <h2>¿Qué podemos hacer por tu negocio?</h2>
+          <h2 className="section-title" id="Proposicion">
+            ¿Qué podemos hacer <span>por tu negocio?</span>
+          </h2>
           <p>
             Creamos soluciones digitales pensadas para mejorar tu presencia online,
             atraer más clientes y hacer crecer tu negocio.

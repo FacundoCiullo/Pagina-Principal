@@ -1,14 +1,22 @@
+import useReveal from "../../hooks/useReveal";
 import "../../styles/process.css";
 import { FaSearch, FaDraftingCompass, FaCode, FaRocket } from "react-icons/fa";
 
 export default function Process() {
+
+  const { ref, visible } = useReveal(0.2);
+
   return (
-    <section className="process-section" id="process">
+    <section
+      ref={ref}
+      className={`process-section ${visible ? "visible" : ""}`}
+      id="process"
+    >
 
       <div className="process-container">
 
-        <div className="process-header">
-          <h2>Cómo trabajamos</h2>
+        <div className="process-header reveal-item">
+          <h2 className="section-title">Cómo trabajamos</h2>
           <p>
             Nuestro proceso está pensado para transformar una idea
             en una experiencia web moderna y funcional.
@@ -17,7 +25,7 @@ export default function Process() {
 
         <div className="process-grid">
 
-          <div className="process-card">
+          <div className="process-card reveal-item">
             <FaSearch className="process-icon"/>
             <h3>Análisis</h3>
             <p>
@@ -26,7 +34,7 @@ export default function Process() {
             </p>
           </div>
 
-          <div className="process-card">
+          <div className="process-card reveal-item">
             <FaDraftingCompass className="process-icon"/>
             <h3>Diseño</h3>
             <p>
@@ -35,7 +43,7 @@ export default function Process() {
             </p>
           </div>
 
-          <div className="process-card">
+          <div className="process-card reveal-item">
             <FaCode className="process-icon"/>
             <h3>Desarrollo</h3>
             <p>
@@ -44,7 +52,7 @@ export default function Process() {
             </p>
           </div>
 
-          <div className="process-card">
+          <div className="process-card reveal-item">
             <FaRocket className="process-icon"/>
             <h3>Lanzamiento</h3>
             <p>

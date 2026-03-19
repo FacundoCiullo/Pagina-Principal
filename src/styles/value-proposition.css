@@ -8,16 +8,13 @@
   padding: 150px 4% 50px;
   color: white;
   overflow: hidden;
-    min-height: 80vh;
-
+  min-height: 80vh;
     background:
       linear-gradient(165deg, rgba(255,115,0,.15), rgba(168,85,247,.15)),
       url("../assets/dots-bg5.png");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     /* PARALLAX SOLO PARA DESKTOP */
     background-attachment: fixed;
   }
@@ -70,23 +67,16 @@
 .value-card {
   position: relative;
   overflow: hidden;
-
   flex: 1 1 260px;
   max-width: 260px;
-
   padding: 28px;
-
   background: var(--soft);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
-
   backdrop-filter: blur(12px);
-
   color: var(--text-1);
   text-align: center;
-
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-
   transition: transform 0.3s ease;
 }
 
@@ -110,7 +100,7 @@
 
 .value-card:hover{
   transform: translateY(-8px) scale(1.02);  
-  box-shadow: 0 25px 70px rgba(255,119,0,0.3);
+  box-shadow: 0 0px 20px rgba(255,119,0,0.3);
   border-color: rgba(255,119,0,0.3);
 }
 
@@ -118,44 +108,26 @@
     REVEAL VALUE SECTION
   ========================= */
 
-  .value-section .reveal-item {
-    opacity: 0;
-    transform: translateY(40px);
-  }
+.value-section .reveal-item {
+  opacity: 0;
+  transform: translateY(60px);
+}
 
-  /* activa */
+.value-section.visible .reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
 
-  .value-section.visible .reveal-item {
-    opacity: 1;
-    transform: translateY(0);
-    transition:
-      opacity 0.6s ease,
-      transform 0.6s ease;
-  }
+/* cards más vivas */
 
-  /* header primero */
+.value-section.visible .value-card:nth-child(1){ transition-delay: 0.1s; }
+.value-section.visible .value-card:nth-child(2){ transition-delay: 0.2s; }
+.value-section.visible .value-card:nth-child(3){ transition-delay: 0.3s; }
+.value-section.visible .value-card:nth-child(4){ transition-delay: 0.4s; }
 
-  .value-section.visible .value-header {
-    transition-delay: 0.2s;
-  }
-
-  /* cards en cascada */
-
-  .value-section.visible .value-card:nth-child(1){
-    transition-delay: 0.1s;
-  }
-
-  .value-section.visible .value-card:nth-child(2){
-    transition-delay: 0.1s;
-  }
-
-  .value-section.visible .value-card:nth-child(3){
-    transition-delay: 0.1s;
-  }
-
-  .value-section.visible .value-card:nth-child(4){
-    transition-delay: 0.2s;
-  }
 
 /* ========================================
   ICON
@@ -176,7 +148,6 @@
 ======================================== */
 
 @media (max-width: 900px) {
-
   .value-card {
     flex: 1 1 45%;
     max-width: none;
@@ -189,12 +160,9 @@
 ======================================== */
 
 @media (max-width: 768px) {
-
   .value-section {
     padding: 190px 4% 50px;
-    
     /* FIX ZOOM BACKGROUND MOBILE */
-
     background-attachment: scroll;
 
   }
@@ -213,6 +181,10 @@
     font-size: 0.95rem;
   }
 
+  .value-header h2 {
+    font-size: 2rem;
+  }
+
   .value-card p {
     font-size: 0.8rem;
   }
@@ -220,5 +192,4 @@
   .value-icon {
     font-size: 1.8rem;
   }
-
 }

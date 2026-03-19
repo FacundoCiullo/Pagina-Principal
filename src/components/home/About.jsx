@@ -1,30 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import useReveal from "../../hooks/useReveal";
 import "../../styles/about.css";
 
 export default function About() {
 
-  const [visible, setVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // 🔥 cambio clave: ahora entra Y sale
-        setVisible(entry.isIntersecting);
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-
-    return () => observer.disconnect();
-
-  }, []);
+  const { ref, visible } = useReveal(0.2);
 
   return (
     <section
-      ref={sectionRef}
+      ref={ref}
       className={`about-section ${visible ? "visible" : ""}`}
       id="about"
     >
