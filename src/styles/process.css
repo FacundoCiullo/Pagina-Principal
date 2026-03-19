@@ -173,8 +173,9 @@
 
   .process-section{
     padding: 80px 5% 5%;
-            /* FIX ZOOM BACKGROUND MOBILE */
-    background-size: contain;
+    /* FIX ZOOM BACKGROUND MOBILE */
+    background-attachment: scroll;
+
   }
 
   .process-grid{

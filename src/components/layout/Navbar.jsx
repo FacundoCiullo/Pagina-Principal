@@ -98,7 +98,7 @@ if (!open) {
           <ul className="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#Proposition">Propuesta</a></li>
-            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#servicios">Servicios Lab</a></li>
             <li><a href="#about">Quienes somos</a></li>
             <li><a href="#process">Como trabajamos</a></li>
             <li><a href="#cta" className="bt-cta">Contacto</a></li>
@@ -127,7 +127,7 @@ if (!open) {
       >
         <a href="#inicio" onClick={() => setOpen(false)}>Inicio</a>
         <a href="#Proposicion" onClick={() => setOpen(false)}>Propuesta</a>
-        <a href="#servicios" onClick={() => setOpen(false)}>Servicios</a>
+        <a href="#servicios" onClick={() => setOpen(false)}>Servicios Lab</a>
         <a href="#about" onClick={() => setOpen(false)}>Quienes somos</a>
         <a href="#process" onClick={() => setOpen(false)}>Como trabajamos</a>
         <a href="#cta" className="bt-cta" onClick={() => setOpen(false)}>Contacto</a>

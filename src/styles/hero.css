@@ -240,7 +240,7 @@
   animation: floatCard 2s ease-in-out infinite;
 }
 
-.hero-card h3 {
+.hero-card h1 {
   font-size: 1.2rem;
   margin-bottom: 0.6rem;
 }
@@ -300,9 +300,9 @@
     min-height: auto;
     padding: 8rem 6%;
     padding-bottom: 270px;
-        /* FIX ZOOM BACKGROUND MOBILE */
+    /* FIX ZOOM BACKGROUND MOBILE */
     background-attachment: scroll;
-    background-size: contain;
+
   }
 
   .hero-container {

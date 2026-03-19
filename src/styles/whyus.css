@@ -153,8 +153,9 @@
 
   .why-section {
     padding: 60px 5% 50px;
-                /* FIX ZOOM BACKGROUND MOBILE */
-    background-size: contain;
+    /* FIX ZOOM BACKGROUND MOBILE */
+    background-attachment: scroll;
+
   }
 
   .why-grid {

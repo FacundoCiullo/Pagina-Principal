@@ -166,8 +166,9 @@
 
   .tech-section{
     padding: 30px 5% 60px;
-        /* FIX ZOOM BACKGROUND MOBILE */
-    background-size: contain;
+    /* FIX ZOOM BACKGROUND MOBILE */
+    background-attachment: scroll;
+
   }
 
   .tech-grid{

@@ -65,7 +65,7 @@ export default function Hero() {
 
         <div className="hero-card reveal-item">
 
-          <h3>Proyecto destacado</h3>
+          <h1>Proyecto destacado</h1>
 
           <p className="hero-card-desc">
             Landing + eCommerce — Performance + Crecimiento en ventas.
