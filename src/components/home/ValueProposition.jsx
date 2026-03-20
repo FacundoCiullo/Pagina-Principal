@@ -10,7 +10,6 @@ export default function ValueProposition() {
   const bgBackRef = useRef(null);
   const bgMidRef = useRef(null);
 
-  /* 🔥 PARALLAX MULTICAPA */
   useEffect(() => {
 
     const handleScroll = () => {
@@ -60,18 +59,14 @@ export default function ValueProposition() {
     <section
       ref={ref}
       className={`value-section ${visible ? "visible" : ""}`}
+      aria-labelledby="value-title"
+      id="propuesta"
     >
 
-      {/* 🔥 CAPA FONDO */}
-      <div className="parallax-bg-back" ref={bgBackRef}></div>
-
-      {/* 🔥 CAPA MEDIA */}
-      <div className="parallax-bg-mid" ref={bgMidRef}></div>
-
-      <div className="value-container" >
+      <div className="value-container">
 
         <div className="value-header reveal-item">
-          <h2 className="section-title" id="Proposicion">
+          <h2 className="section-title" id="value-title">
             ¿Qué podemos hacer <span>por tu negocio?</span>
           </h2>
           <p>
@@ -85,8 +80,14 @@ export default function ValueProposition() {
             const Icon = item.icon;
 
             return (
-              <div className="value-card reveal-item" key={index}>
-                <Icon className="value-icon" />
+              <div 
+                className="value-card reveal-item" 
+                key={index}
+              >
+                <Icon 
+                  className="value-icon" 
+                  aria-hidden="true"
+                />
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>

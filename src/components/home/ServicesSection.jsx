@@ -19,9 +19,7 @@ export default function ServicesSection(){
 
   const [selectedService,setSelectedService]=useState(null);
 
-  const closeModal=()=>{
-    setSelectedService(null);
-  };
+  const closeModal=()=> setSelectedService(null);
 
   useEffect(()=>{
     const handleKey=(e)=>{
@@ -35,9 +33,7 @@ export default function ServicesSection(){
     if(selectedService){
       window.history.pushState({modal:true},"");
     }
-    const handlePopState=()=>{
-      closeModal();
-    };
+    const handlePopState=()=> closeModal();
     window.addEventListener("popstate",handlePopState);
     return()=>window.removeEventListener("popstate",handlePopState);
   },[selectedService]);
@@ -49,15 +45,18 @@ export default function ServicesSection(){
 
       <div className="container">
 
-        <h2 className="section-title">Nuestros Servicios</h2>
+        <h2 className="section-title">
+          Nuestros Servicios
+        </h2>
 
         <div className="services-grid">
           {services.map((service)=>{
             const Icon=iconMap[service.icon];
+
             return(
             <div key={service.id} className="service-card">
 
-              {Icon && <Icon className="service-icon" />}
+              {Icon && <Icon className="service-icon" aria-hidden="true" />}
 
               <h3>{service.title}</h3>
 
@@ -67,9 +66,10 @@ export default function ServicesSection(){
                 {service.description}
               </p>
 
-
               <button
+                type="button"
                 className="service-btn"
+                aria-label={`Consultar sobre ${service.title}`}
                 onClick={()=>setSelectedService(service)}
               >
                 Consultar
@@ -85,6 +85,9 @@ export default function ServicesSection(){
       {selectedService&&(
         <div
           className="service-modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
           onClick={closeModal}
         >
 
@@ -96,6 +99,7 @@ export default function ServicesSection(){
             <button
               type="button"
               className="modal-close"
+              aria-label="Cerrar ventana"
               onClick={closeModal}
             >
               ✕
@@ -103,9 +107,9 @@ export default function ServicesSection(){
 
             <div className="modal-content">
 
-              {ModalIcon&&<ModalIcon className="service-icon"/>}
+              {ModalIcon&&<ModalIcon className="service-icon" aria-hidden="true"/>}
 
-              <h3>{selectedService.title}</h3>
+              <h3 id="modal-title">{selectedService.title}</h3>
 
               <p className="modal-price">
                 {selectedService.price}
@@ -126,6 +130,7 @@ export default function ServicesSection(){
                 <a
                   href="#contacto"
                   className="btn-budget"
+                  aria-label="Ir a contacto para solicitar presupuesto"
                   onClick={closeModal}
                 >
                   Solicitar presupuesto

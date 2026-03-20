@@ -11,12 +11,13 @@ export default function Process() {
       ref={ref}
       className={`process-section ${visible ? "visible" : ""}`}
       id="process"
+      aria-labelledby="process-title"
     >
 
       <div className="process-container">
 
         <div className="process-header reveal-item">
-          <h2 className="section-title">Cómo trabajamos</h2>
+          <h2 id="process-title" className="section-title">Cómo trabajamos</h2>
           <p>
             Nuestro proceso está pensado para transformar una idea
             en una experiencia web moderna y funcional.
@@ -25,40 +26,28 @@ export default function Process() {
 
         <div className="process-grid">
 
-          <div className="process-card reveal-item">
-            <FaSearch className="process-icon"/>
+          <div className="process-card reveal-item" role="article">
+            <FaSearch className="process-icon" aria-hidden="true"/>
             <h3>Análisis</h3>
-            <p>
-              Entendemos tu negocio, tus objetivos y las necesidades
-              de tu proyecto.
-            </p>
+            <p>Entendemos tu negocio, objetivos y necesidades.</p>
           </div>
 
-          <div className="process-card reveal-item">
-            <FaDraftingCompass className="process-icon"/>
+          <div className="process-card reveal-item" role="article">
+            <FaDraftingCompass className="process-icon" aria-hidden="true"/>
             <h3>Diseño</h3>
-            <p>
-              Creamos la estructura y el diseño de la web
-              priorizando experiencia de usuario.
-            </p>
+            <p>Creamos estructura y experiencia de usuario.</p>
           </div>
 
-          <div className="process-card reveal-item">
-            <FaCode className="process-icon"/>
+          <div className="process-card reveal-item" role="article">
+            <FaCode className="process-icon" aria-hidden="true"/>
             <h3>Desarrollo</h3>
-            <p>
-              Construimos el sitio con tecnologías modernas
-              optimizando rendimiento y escalabilidad.
-            </p>
+            <p>Construimos con tecnologías modernas y optimizadas.</p>
           </div>
 
-          <div className="process-card reveal-item">
-            <FaRocket className="process-icon"/>
+          <div className="process-card reveal-item" role="article">
+            <FaRocket className="process-icon" aria-hidden="true"/>
             <h3>Lanzamiento</h3>
-            <p>
-              Publicamos el proyecto y ofrecemos soporte
-              para su crecimiento y mantenimiento.
-            </p>
+            <p>Publicamos y acompañamos el crecimiento.</p>
           </div>
 
         </div>

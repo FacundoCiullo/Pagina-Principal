@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer">
+    <footer className="footer" role="contentinfo">
       <div className="footer-content">
 
         <div className="footer-brand">
@@ -21,25 +21,32 @@ export default function Footer() {
         </div>
 
         <div className="social-links">
+
           <a
             href="https://wa.me/5491136968683"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Contactar por WhatsApp"
           >
-            <FaWhatsapp />
+            <FaWhatsapp aria-hidden="true"/>
           </a>
 
           <a
             href="https://instagram.com/coderfoxlab"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Ver Instagram"
           >
-            <FaInstagram />
+            <FaInstagram aria-hidden="true"/>
           </a>
 
-          <a href="mailto:codefoxsolutions@gmail.com">
-            <MdMailOutline />
+          <a
+            href="mailto:codefoxsolutions@gmail.com"
+            aria-label="Enviar correo electrónico"
+          >
+            <MdMailOutline aria-hidden="true"/>
           </a>
+
         </div>
 
         <div className="footer-copy">

@@ -34,8 +34,8 @@ export default function ServiceCard({ service }) {
         </p>
       ))}
 
-      <Link to="/contacto">
-        <Button className="btn-cta-service" variant="outline-light" size="lg">
+      <Link to="/contacto" aria-label="Contacto">
+        <Button className="btn-cta-service" variant="outline-light" size="lg" aria-label="Contacto">
           Contratar
         </Button>
       </Link>

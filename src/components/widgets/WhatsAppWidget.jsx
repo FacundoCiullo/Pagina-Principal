@@ -3,7 +3,7 @@ import "./styles/widgets.css";
 
 export default function WhatsAppWidget() {
 
-  const phone = "5491123456789"; // tu numero
+  const phone = "5491123456789";
 
   return (
     <a
@@ -11,8 +11,10 @@ export default function WhatsAppWidget() {
       className="whatsapp-widget"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Chatear por WhatsApp"
+      title="WhatsApp"
     >
-      <FaWhatsapp />
+      <FaWhatsapp aria-hidden="true"/>
     </a>
   );
 }

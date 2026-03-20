@@ -9,16 +9,18 @@ export default function Hero() {
     <section
       ref={ref}
       className={`hero ${visible ? "visible" : ""}`}
+      aria-labelledby="hero-title"
+      id="inicio"
     >
 
-      <div className="hero-overlay"></div>
-      <div className="hero-shape"></div>
+      <div className="hero-overlay" aria-hidden="true"></div>
+      <div className="hero-shape" aria-hidden="true"></div>
 
       <div className="hero-container">
 
         <div className="hero-left reveal-item">
 
-          <h1>
+          <h1 id="hero-title">
             Desarrollamos{" "}
             <span className="hero-highlight">
               experiencias
@@ -35,48 +37,55 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <a href="#servicios" className="btn-primary">
+            <a 
+              href="#servicios" 
+              className="btn-primary"
+              aria-label="Ver servicios disponibles"
+            >
               Servicios
             </a>
 
-            <a href="#contacto" className="btn-secondary">
+            <a 
+              href="#contacto" 
+              className="btn-secondary"
+              aria-label="Solicitar presupuesto"
+            >
               Solicitar presupuesto
             </a>
           </div>
 
           <div className="hero-stats">
             <div className="stat">
-              <span>+20</span>
-              <p>Proyectos</p>
+              <span aria-hidden="true">+20</span>
+              <p>Proyectos realizados</p>
             </div>
 
             <div className="stat">
-              <span>100%</span>
-              <p>responsive</p>
+              <span aria-hidden="true">100%</span>
+              <p>Diseño responsive</p>
             </div>
 
             <div className="stat">
-              <span>+3</span>
-              <p>Años de Experiencia</p>
+              <span aria-hidden="true">+3</span>
+              <p>Años de experiencia</p>
             </div>
           </div>
 
         </div>
 
-        <div className="hero-card reveal-item">
+        <div className="hero-card reveal-item" aria-labelledby="proyecto-destacado">
 
-          <h1>Proyecto destacado</h1>
+          <h2 id="proyecto-destacado">Proyecto destacado</h2>
 
           <p className="hero-card-desc">
             Landing + eCommerce — Performance + Crecimiento en ventas.
           </p>
 
-          <div className="tech-stack">
-            <span>React -</span>
-            <span> Vite -</span>
-            <span> Node -</span>
-            <span> Netlify -</span>
-            <span> Vercel</span>
+          <div className="tech-stack" aria-label="Tecnologías utilizadas">
+            <span>React</span>
+            <span>CSS</span>
+            <span>Firebase</span>
+            <span>Node.js</span>
           </div>
 
         </div>

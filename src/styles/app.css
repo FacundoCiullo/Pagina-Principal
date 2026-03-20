@@ -70,7 +70,7 @@
     --bg-1: #ffffff;       /* blanco */
     --bg-2: #2f3648;       /* gris oscuro base */
     --bg-3: #ff6600;       /* naranja */
-    --bg-4: #161616;       /* Oscuro */
+    --bg-4: #000000cb;       /* Oscuro */
     --bg-5: rgba(255,115,0,0.15);  /* marron */
     --bg-6: rgba(168,85,247,0.15);  /* violeta */
     --bg-7: rgba(169, 85, 247, 0.697);  /* violeta */

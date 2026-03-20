@@ -9,32 +9,26 @@ export default function ScrollTopWidget() {
   useEffect(() => {
 
     const toggleVisible = () => {
-      if (window.scrollY > 400) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
+      setVisible(window.scrollY > 400);
     };
 
     window.addEventListener("scroll", toggleVisible);
-
     return () => window.removeEventListener("scroll", toggleVisible);
 
   }, []);
 
   const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <button
       className={`scrolltop-widget ${visible ? "show" : ""}`}
       onClick={scrollTop}
+      aria-label="Volver arriba"
+      title="Subir"
     >
-      <FaArrowUp />
+      <FaArrowUp aria-hidden="true"/>
     </button>
   );
 }
